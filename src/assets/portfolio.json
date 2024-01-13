@@ -1,0 +1,51 @@
+{
+  "basics": {
+    "name": "Steve Jobs",
+    "label": "Co-founder and CEO",
+    "image": "url_to_steve_jobs_image",
+    "email": "steve.jobs@apple.com",
+    "phone": "(123) 456-7890",
+    "linkedin": "https://www.linkedin.com/in/stevejobs",
+    "github": "https://github.com/stevejobs",
+    "xing": "https://www.xing.com/profile/Steve_Jobs"
+  },
+  "education": [
+    {
+      "institution": "Reed College",
+      "area": "Physics, Literature, and Poetry",
+      "studyType": "Dropout",
+      "startDate": "1972-01-01",
+      "endDate": "1972-01-01"
+    }
+  ],
+  "work": [
+    {
+      "company": "Apple Inc.",
+      "position": "Co-founder and CEO",
+      "startDate": "1976-01-01",
+      "endDate": "2011-08-24",
+      "summary": "Co-founded Apple in 1976 to sell Wozniak's Apple I personal computer, and followed with the Apple II in 1977."
+    },
+    {
+      "company": "Pixar",
+      "position": "CEO",
+      "startDate": "1986-01-01",
+      "endDate": "2006-05-05",
+      "summary": "Acquired The Graphics Group (later renamed Pixar) from Lucasfilm's computer graphics division in 1986."
+    },
+    {
+      "company": "NeXT",
+      "position": "Founder and CEO",
+      "startDate": "1985-01-01",
+      "endDate": "1997-01-01",
+      "summary": "Founded NeXT Inc. in 1985 after his resignation from Apple."
+    }
+  ],
+  "skills": [
+    {
+      "name": "Innovation",
+      "level": "Master",
+      "keywords": ["Product Development", "Marketing", "Leadership"]
+    }
+  ]
+}
