@@ -14,6 +14,9 @@ dependencies:
   '@tabler/icons':
     specifier: ^2.46.0
     version: 2.46.0
+  '@tabler/icons-react':
+    specifier: ^2.46.0
+    version: 2.46.0(react@18.2.0)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -37,9 +40,6 @@ devDependencies:
   '@vitejs/plugin-react':
     specifier: 4.2.1
     version: 4.2.1(vite@5.0.11)
-  eslint:
-    specifier: 8.56.0
-    version: 8.56.0
   eslint-plugin-react-hooks:
     specifier: 4.6.0
     version: 4.6.0(eslint@8.56.0)
@@ -787,6 +787,16 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@tabler/icons-react@2.46.0(react@18.2.0):
+    resolution: {integrity: sha512-X8MRxuslIOFqMjAo+GvUZDpjlOwNYNJTuOsHXf/NBvVI6ygqUf0FUNsDLLA5fQ6k6KtRwxMlgGB+eR8ZG1UP0g==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@tabler/icons': 2.46.0
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
 
   /@tabler/icons@2.46.0:
     resolution: {integrity: sha512-Q5G8Pj5IO+Uhc6pszpu5/hGYY018JwEzzvmuqr+gKJtfIvAHA3umpwUilMRLEy89p+WCP+YsDhicMhfBCCv1qA==}

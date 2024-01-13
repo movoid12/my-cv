@@ -8,7 +8,7 @@ interface Education {
 }
 
 interface EducationProps {
-  education: Education[];
+  education?: Education[];
 }
 
 const EducationSection: React.FC<EducationProps> = ({ education }) => {
@@ -17,7 +17,7 @@ const EducationSection: React.FC<EducationProps> = ({ education }) => {
       <Card.Section>
         <Text size="lg">Education</Text>
       </Card.Section>
-      {education.map((edu, index) => (
+      {education?.map((edu, index) => (
         <Group key={index}>
           <Text>{edu.degree}</Text>
           <Text size="sm">{edu.institution}</Text>

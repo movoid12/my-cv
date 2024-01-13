@@ -3,7 +3,7 @@ import { Card, Space, Stack, Text, Title } from "@mantine/core";
 export const WorkExperienceSection = ({
   experiences,
 }: {
-  experiences: {
+  experiences?: {
     position: string;
     company: string;
     startDate: string;
@@ -14,7 +14,7 @@ export const WorkExperienceSection = ({
     <Card shadow="sm" padding="lg" style={{ marginBottom: 20 }}>
       <Title order={3}>Work Experience</Title>
       <Space h="md" />
-      {experiences.map((experience, index) => (
+      {experiences?.map((experience, index) => (
         <Stack
           key={index}
           h={300}
