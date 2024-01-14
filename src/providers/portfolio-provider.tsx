@@ -1,10 +1,26 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-// Define types that match the structure of your resume JSON
+// Define types that match the structure of the provided JSON
 type SocialLink = {
+  linkedin: string;
+  github: string;
+  xing: string;
+};
+
+type Basics = {
   name: string;
-  icon: string;
-  url: string;
+  label: string;
+  image: string;
+  email: string;
+  phone: string;
+} & SocialLink;
+
+type Education = {
+  institution: string;
+  area: string;
+  studyType: string;
+  startDate: string;
+  endDate: string;
 };
 
 type WorkExperience = {
@@ -12,43 +28,32 @@ type WorkExperience = {
   position: string;
   startDate: string;
   endDate: string;
+  summary: string;
 };
 
-type Education = {
-  institution: string;
-  degree: string;
-  startDate: string;
-  endDate: string;
-};
-
-type Skill = string;
-
-type Project = {
+type Skill = {
   name: string;
-  description: string;
+  level: string;
+  keywords: string[];
 };
 
 type ResumeData = {
-  name: string;
-  label: string;
-  image: string;
-  email: string;
-  phone: string;
-  socialLinks: SocialLink[];
-  workExperience?: WorkExperience[];
+  basics: Basics;
   education: Education[];
+  work: WorkExperience[];
   skills: Skill[];
-  projects: Project[];
 };
 
 interface PortfolioContextData {
   data: ResumeData | null;
   loading: boolean;
+  error: string | null;
 }
 
 const PortfolioContext = createContext<PortfolioContextData>({
   data: null,
   loading: true,
+  error: null,
 });
 
 export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({
@@ -56,26 +61,39 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
   const [data, setData] = useState<ResumeData | null>(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    fetch("/assets/portfolio.json")
-      .then((response) => response.json())
-      .then((jsonData: ResumeData) => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/assets/portfolio.json");
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const contentType = response.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          const responseBody = await response.text();
+          console.error("Unexpected response:", responseBody);
+          throw new Error(`Expected JSON, but received ${contentType}`);
+        }
+        const jsonData: ResumeData = await response.json();
         setData(jsonData);
+      } catch (error: any) {
+        console.error("Failed to load portfolio data", error.message);
+        setError(error.message);
+      } finally {
         setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Failed to load portfolio data", error);
-        setLoading(false);
-      });
+      }
+    };
+
+    fetchData();
   }, []);
 
   return (
-    <PortfolioContext.Provider value={{ data, loading }}>
+    <PortfolioContext.Provider value={{ data, loading, error }}>
       {children}
     </PortfolioContext.Provider>
   );
 };
 
-// eslint-disable-next-line react-refresh/only-export-components
 export const usePortfolio = () => useContext(PortfolioContext);

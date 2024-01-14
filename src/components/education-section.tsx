@@ -1,11 +1,12 @@
 import { Card, Group, Text } from "@mantine/core";
 
-interface Education {
-  degree: string;
+type Education = {
   institution: string;
+  area: string;
+  studyType: string;
   startDate: string;
   endDate: string;
-}
+};
 
 interface EducationProps {
   education?: Education[];
@@ -19,7 +20,7 @@ const EducationSection: React.FC<EducationProps> = ({ education }) => {
       </Card.Section>
       {education?.map((edu, index) => (
         <Group key={index}>
-          <Text>{edu.degree}</Text>
+          <Text>{edu.area}</Text>
           <Text size="sm">{edu.institution}</Text>
           <Text size="xs">
             {edu.startDate} - {edu.endDate}
