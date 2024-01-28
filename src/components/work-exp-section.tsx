@@ -1,4 +1,4 @@
-import { Card, Group, Paper, Space, Stack, Text, Title } from "@mantine/core";
+import { Card, Group, Paper, Space, Text, Title } from "@mantine/core";
 
 export const WorkExperienceSection = ({
   experiences,
@@ -20,9 +20,9 @@ export const WorkExperienceSection = ({
           <Group gap="xl" grow>
             <Text fw="bold">{experience.company}</Text>
             <Group justify="flex-end">
-            <Text size="xs">
-              {experience.startDate} - {experience.endDate}
-            </Text>
+              <Text size="xs">
+                {experience.startDate} - {experience.endDate}
+              </Text>
             </Group>
           </Group>
           <Text>{experience.position}</Text>

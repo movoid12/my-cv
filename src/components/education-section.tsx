@@ -1,4 +1,4 @@
-import { Card, Group, Text } from "@mantine/core";
+import { Card, Group, Paper, Space, Text, Title } from "@mantine/core";
 
 type Education = {
   institution: string;
@@ -8,24 +8,27 @@ type Education = {
   endDate: string;
 };
 
-interface EducationProps {
+type EducationProps = {
   education?: Education[];
-}
+};
 
-const EducationSection: React.FC<EducationProps> = ({ education }) => {
+const EducationSection = ({ education }: EducationProps) => {
   return (
-    <Card shadow="sm" padding="lg">
-      <Card.Section>
-        <Text size="lg">Education</Text>
-      </Card.Section>
+    <Card>
+      <Title order={3}>Education</Title>
+      <Space h="md" />
       {education?.map((edu, index) => (
-        <Group key={index}>
+        <Paper key={index}>
+          <Group gap="xl" grow>
+            <Text fw="bold">{edu.institution}</Text>
+            <Group justify="flex-end">
+              <Text size="xs">
+                {edu.startDate} - {edu.endDate}
+              </Text>
+            </Group>
+          </Group>
           <Text>{edu.area}</Text>
-          <Text size="sm">{edu.institution}</Text>
-          <Text size="xs">
-            {edu.startDate} - {edu.endDate}
-          </Text>
-        </Group>
+        </Paper>
       ))}
     </Card>
   );
