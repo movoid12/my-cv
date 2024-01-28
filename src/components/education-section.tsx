@@ -1,18 +1,16 @@
 import { Card, Group, Paper, Space, Text, Title } from "@mantine/core";
 
-type Education = {
-  institution: string;
-  area: string;
-  studyType: string;
-  startDate: string;
-  endDate: string;
-};
-
-type EducationProps = {
-  education?: Education[];
-};
-
-const EducationSection = ({ education }: EducationProps) => {
+const EducationSection = ({
+  education,
+}: {
+  education?: {
+    institution: string;
+    area: string;
+    studyType: string;
+    startDate: string;
+    endDate: string;
+  }[];
+}) => {
   return (
     <Card>
       <Title order={3}>Education</Title>
