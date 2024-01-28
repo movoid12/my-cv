@@ -1,4 +1,4 @@
-import { Container, Stack } from "@mantine/core";
+import { Container } from "@mantine/core";
 
 import EducationSection from "../components/education-section";
 import { WorkExperienceSection } from "../components/work-exp-section";

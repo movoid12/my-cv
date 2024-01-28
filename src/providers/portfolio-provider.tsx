@@ -31,7 +31,7 @@ type WorkExperience = {
   summary: string;
 };
 
-type Skill = {
+export type Skill = {
   name: string;
   level: string;
   keywords: string[];
