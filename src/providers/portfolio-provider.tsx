@@ -1,13 +1,12 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 
-// Define types that match the structure of the provided JSON
 type SocialLink = {
   linkedin: string;
   github: string;
   xing: string;
 };
 
-type Basics = {
+export type Basics = {
   name: string;
   label: string;
   image: string;
@@ -15,7 +14,7 @@ type Basics = {
   phone: string;
 } & SocialLink;
 
-type Education = {
+export type Education = {
   institution: string;
   area: string;
   studyType: string;
@@ -23,7 +22,7 @@ type Education = {
   endDate: string;
 };
 
-type WorkExperience = {
+export type WorkExperience = {
   company: string;
   position: string;
   startDate: string;
@@ -96,4 +95,4 @@ export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({
   );
 };
 
-export const usePortfolio = () => useContext(PortfolioContext);
+export const usePortfolioData = () => useContext(PortfolioContext);

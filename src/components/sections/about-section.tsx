@@ -4,30 +4,20 @@ import {
   IconBrandGithubFilled,
   IconBrandXing,
 } from "@tabler/icons-react";
-
-type Basics = {
-  name: string;
-  label: string;
-  image: string;
-  email: string;
-  phone: string;
-  linkedin: string;
-  github: string;
-  xing: string;
-};
+import { type Basics } from "../../providers/portfolio-provider";
 
 export const AboutSection = ({ basics }: { basics?: Basics }) => {
   return (
-    <Card>
+    <Card withBorder>
       <Title order={3} fw="bold">
         About
       </Title>
       <Text size="lg">{basics?.name}</Text>
       <Text size="sm">{basics?.label}</Text>
-
-      <Text size="sm" style={{ lineHeight: 1.5, marginTop: "1em" }}>
-        Email: {basics?.email}
-      </Text>
+      <Group style={{ marginTop: "1em" }}>
+        <Title size="sm">Email:</Title>
+        <Text>{basics?.email}</Text>
+      </Group>
       <Text size="sm" style={{ lineHeight: 1.5 }}>
         Phone: {basics?.phone}
       </Text>

@@ -1,5 +1,5 @@
 import { Badge, Card, Group, Space, Title, Text } from "@mantine/core";
-import { Skill } from "../providers/portfolio-provider";
+
 
 
 
