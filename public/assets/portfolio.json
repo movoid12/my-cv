@@ -1,10 +1,12 @@
 {
   "basics": {
     "name": "Steve Jobs",
-    "label": "Co-founder and CEO",
+    "label": "Full Stack Engineer focused on building products with extra attention to detail. Full Stack Engineer focused on building products with extra attention to detail",
     "image": "url_to_steve_jobs_image",
     "email": "steve.jobs@apple.com",
     "phone": "(123) 456-7890",
+    "address": "Esmarchstr. 59, Gramsberg, ST 43244",
+    "location_link": "https://www.google.com/maps/place/Wrocław",
     "linkedin": "https://www.linkedin.com/in/stevejobs",
     "github": "https://github.com/stevejobs",
     "xing": "https://www.xing.com/profile/Steve_Jobs"

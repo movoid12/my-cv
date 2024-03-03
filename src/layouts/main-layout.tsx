@@ -1,4 +1,4 @@
-import { Card, Container } from "@mantine/core";
+import { Container } from "@mantine/core";
 
 import EducationSection from "../components/sections/education-section";
 import { WorkExperienceSection } from "../components/sections/work-exp-section";
@@ -9,13 +9,11 @@ import { AboutSection } from "../components/sections/about-section";
 const MainLayout = () => {
   const { data } = usePortfolioData();
   return (
-    <Container size="md">
+    <Container size="sm" pt={50}>
       <AboutSection basics={data?.basics} />
-      <Card withBorder>
       <WorkExperienceSection experiences={data?.work} />
       <EducationSection education={data?.education} />
       <SkillsSection skills={data?.skills} />
-      </Card>
     </Container>
   );
 };

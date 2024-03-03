@@ -12,6 +12,8 @@ export type Basics = {
   image: string;
   email: string;
   phone: string;
+  address: string;
+  location_link: string;
 } & SocialLink;
 
 export type Education = {
