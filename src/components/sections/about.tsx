@@ -10,7 +10,7 @@ import {
 import { type Basics } from "../../providers/data-provider";
 import usePrintDetector from "../../hooks/use-print-detector";
 
-export const AboutSection = ({ basics }: { basics?: Basics }) => {
+export const About = ({ basics }: { basics?: Basics }) => {
   const [ isPrinting ] = usePrintDetector();
 
   return (

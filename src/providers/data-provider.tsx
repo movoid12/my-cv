@@ -32,11 +32,11 @@ export type WorkExperience = {
   startDate: string;
   endDate: string;
   summary: string;
+  location: string
 };
 
 export type Skill = {
   name: string;
-  level: string;
   keywords: string[];
 };
 

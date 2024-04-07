@@ -28,36 +28,33 @@
   ],
   "work": [
     {
-      "company": "Apple Inc.",
-      "position": "Co-founder and CEO",
-      "startDate": "1976-01-01",
-      "endDate": "2011-08-24",
-      "summary": "Co-founded Apple in 1976 to sell Wozniak's Apple I personal computer, and followed with the Apple II in 1977."
+      "company": "ETECTURE GmbH",
+      "position": "Software Developer",
+      "startDate": "2022-11",
+      "endDate": "Present",
+      "summary": "Software Developer in Node.JS, Typescript",
+      "location": "Frankfurt am Main, Hesse, Germany (Remote)"
     },
     {
-      "company": "Pixar",
-      "position": "CEO",
-      "startDate": "1986-01-01",
-      "endDate": "2006-05-05",
-      "summary": "Acquired The Graphics Group (later renamed Pixar) from Lucasfilm's computer graphics division in 1986."
+      "company": "zwonull media",
+      "position": "Junior Software Developer",
+      "startDate": "2022-7",
+      "endDate": "2022-10",
+      "summary": "• Migration from TYPO3 into Wordpress. Online contributions and autonomous project management\n• Understanding of web engineering principles, and have used this knowledge to optimize website performance and improve user experience.",
+      "location": "Leipzig, Germany"
     },
     {
-      "company": "NeXT",
-      "position": "Founder and CEO",
-      "startDate": "1985-01-01",
-      "endDate": "1997-01-01",
-      "summary": "Founded NeXT Inc. in 1985 after his resignation from Apple."
+      "company": "zwonull media",
+      "position": "Trainee in Web-Engineering",
+      "startDate": "2019-02",
+      "endDate": "2022-07",
+      "summary": "Digital signage implementation -  Using WordPress, Git, and other CMS systems to customize content and do code changes - Using HTML, CSS, JavaScript and TypeScript to create web pages and fix issues of PWAs.",
+      "location": "Leipzig, Germany"
     }
   ],
   "skills": [
     {
       "name": "Innovation",
-      "level": "Master",
-      "keywords": ["Product Development", "Marketing", "Leadership"]
-    },
-    {
-      "name": "Innovation",
-      "level": "Master",
       "keywords": ["Product Development", "Marketing", "Leadership"]
     }
   ]

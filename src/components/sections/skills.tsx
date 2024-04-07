@@ -1,17 +1,15 @@
 import { Badge, Card, Group, Space, Title, Text } from "@mantine/core";
+import { Skill } from "../../providers/data-provider";
 
-
-
-
-export const SkillsSection = ({ skills }: { skills?: Skill[] }) => {
+export const Skills = ({ skills }: { skills?: Skill[] }) => {
   return (
-    <Card >
+    <Card>
       <Title order={3}>Skills</Title>
       <Space h="md" />
       {skills?.map((skill, index) => (
         <div key={index}>
           <Text size="sm" style={{ marginBottom: 10 }}>
-          ✦ {skill.name} ({skill.level})
+            ✦ {skill.name}
           </Text>
           <Group gap="xs">
             {skill.keywords.map((keyword, keywordIndex) => (

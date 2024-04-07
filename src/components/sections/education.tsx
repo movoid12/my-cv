@@ -1,6 +1,6 @@
 import { Card, Group, Paper, Space, Text, Title } from "@mantine/core";
 
-const EducationSection = ({
+export default function Education({
   education,
 }: {
   education?: {
@@ -10,7 +10,7 @@ const EducationSection = ({
     startDate: string;
     endDate: string;
   }[];
-}) => {
+}) {
   return (
     <Card>
       <Title order={3}>Education</Title>
@@ -25,12 +25,12 @@ const EducationSection = ({
               </Text>
             </Group>
           </Group>
-          <Text >{edu.area}</Text>
-          <Text c="dimmed" fw={500} size="sm" fs="italic">{edu.studyType}</Text>
+          <Text>{edu.area}</Text>
+          <Text c="dimmed" fw={500} size="sm" fs="italic">
+            {edu.studyType}
+          </Text>
         </Paper>
       ))}
     </Card>
   );
-};
-
-export default EducationSection;
+}

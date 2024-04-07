@@ -1,6 +1,7 @@
 import { Card, Group, Space, Text, Title } from "@mantine/core";
 
-export const ProjectsSection = ({
+export const Projects
+ = ({
   projects,
 }: {
   projects?: { name: string; description: string }[];

@@ -1,19 +1,19 @@
 import { Container } from "@mantine/core";
 
-import EducationSection from "../components/sections/education-section";
-import { WorkExperienceSection } from "../components/sections/work-exp-section";
-import { SkillsSection } from "../components/sections/skills-section";
+import Education from "../components/sections/education";
+import WorkExperience from "../components/sections/work-experience";
+import { Skills } from "../components/sections/skills";
 import { usePortfolioData } from "../providers/data-provider";
-import { AboutSection } from "../components/sections/about-section";
+import { About } from "../components/sections/about";
 
 const MainLayout = () => {
   const { data } = usePortfolioData();
   return (
     <Container size="sm" pt={50}>
-      <AboutSection basics={data?.basics} />
-      <WorkExperienceSection experiences={data?.work} />
-      <EducationSection education={data?.education} />
-      <SkillsSection skills={data?.skills} />
+      <About basics={data?.basics} />
+      <WorkExperience experiences={data?.work} />
+      <Education education={data?.education} />
+      <Skills skills={data?.skills} />
     </Container>
   );
 };
