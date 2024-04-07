@@ -1,4 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import useSWR from "swr";
+import useSWRImmutable from "swr/immutable";
 
 type SocialLink = {
   linkedin: string;
@@ -57,38 +59,17 @@ const PortfolioContext = createContext<PortfolioContextData>({
   error: null,
 });
 
-export const PortfolioProvider: React.FC<{ children: React.ReactNode }> = ({
+const fetcher = (url: RequestInfo | URL) =>
+  fetch(url).then((res) => res.json());
+
+export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
-  const [data, setData] = useState<ResumeData | null>(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("/assets/portfolio.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const contentType = response.headers.get("content-type");
-        if (!contentType || !contentType.includes("application/json")) {
-          const responseBody = await response.text();
-          console.error("Unexpected response:", responseBody);
-          throw new Error(`Expected JSON, but received ${contentType}`);
-        }
-        const jsonData: ResumeData = await response.json();
-        setData(jsonData);
-      } catch (error: any) {
-        console.error("Failed to load portfolio data", error.message);
-        setError(error.message);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const {
+    data,
+    error,
+    isLoading: loading,
+  } = useSWRImmutable("http://localhost:5173/assets/portfolio.json", fetcher, { suspense: true, revalidateOnFocus: true });
 
   return (
     <PortfolioContext.Provider value={{ data, loading, error }}>

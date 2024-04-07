@@ -2,7 +2,6 @@ import {
   Card,
   Text,
   Group,
-  Button,
   Title,
   ActionIcon,
   Stack,
@@ -15,7 +14,7 @@ import {
   IconMail,
   IconWorld,
 } from "@tabler/icons-react";
-import { type Basics } from "../../providers/portfolio-provider";
+import { type Basics } from "../../providers/data-provider";
 
 export const AboutSection = ({ basics }: { basics?: Basics }) => {
   return (
