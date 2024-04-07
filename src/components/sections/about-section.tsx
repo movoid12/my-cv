@@ -8,7 +8,6 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 import { type Basics } from "../../providers/data-provider";
-import { useState } from "react";
 import usePrintDetector from "../../hooks/use-print-detector";
 
 export const AboutSection = ({ basics }: { basics?: Basics }) => {
