@@ -1,11 +1,4 @@
-import {
-  Card,
-  Text,
-  Group,
-  Title,
-  ActionIcon,
-  Stack,
-} from "@mantine/core";
+import { Card, Text, Group, Title, ActionIcon, Stack } from "@mantine/core";
 import {
   IconBrandLinkedin,
   IconBrandGithubFilled,
@@ -15,8 +8,12 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 import { type Basics } from "../../providers/data-provider";
+import { useState } from "react";
+import usePrintDetector from "../../hooks/use-print-detector";
 
 export const AboutSection = ({ basics }: { basics?: Basics }) => {
+  const [ isPrinting ] = usePrintDetector();
+
   return (
     <Card>
       <Stack>
@@ -42,53 +39,55 @@ export const AboutSection = ({ basics }: { basics?: Basics }) => {
         <Text size="xs">{basics?.address}</Text>
       </Group>
 
-      <Group mt="1em">
-        <ActionIcon
-          component="a"
-          href={`mailto:${basics?.email}`}
-          target="_blank"
-          variant="subtle"
-          size="sm"
-        >
-          <IconMail size={18} />
-        </ActionIcon>
-        <ActionIcon
-          component="a"
-          href={`tel:${basics?.phone}`}
-          target="_blank"
-          variant="subtle"
-          size="sm"
-        >
-          <IconPhoneCall size={18} />
-        </ActionIcon>
-        <ActionIcon
-          component="a"
-          href={basics?.linkedin}
-          target="_blank"
-          variant="subtle"
-          size="sm"
-        >
-          <IconBrandLinkedin size={18} />
-        </ActionIcon>
-        <ActionIcon
-          component="a"
-          href={basics?.github}
-          target="_blank"
-          variant="subtle"
-          size="sm"
-        >
-          <IconBrandGithubFilled size={18} />
-        </ActionIcon>
-        <ActionIcon
-          component="a"
-          href={basics?.xing}
-          target="_blank"
-          variant="subtle"
-          size="sm"
-        >
-          <IconBrandXing size={18} />
-        </ActionIcon>
-      </Group>
+      {!isPrinting && (
+        <Group mt="1em">
+          <ActionIcon
+            component="a"
+            href={`mailto:${basics?.email}`}
+            target="_blank"
+            variant="subtle"
+            size="sm"
+          >
+            <IconMail size={18} />
+          </ActionIcon>
+          <ActionIcon
+            component="a"
+            href={`tel:${basics?.phone}`}
+            target="_blank"
+            variant="subtle"
+            size="sm"
+          >
+            <IconPhoneCall size={18} />
+          </ActionIcon>
+          <ActionIcon
+            component="a"
+            href={basics?.linkedin}
+            target="_blank"
+            variant="subtle"
+            size="sm"
+          >
+            <IconBrandLinkedin size={18} />
+          </ActionIcon>
+          <ActionIcon
+            component="a"
+            href={basics?.github}
+            target="_blank"
+            variant="subtle"
+            size="sm"
+          >
+            <IconBrandGithubFilled size={18} />
+          </ActionIcon>
+          <ActionIcon
+            component="a"
+            href={basics?.xing}
+            target="_blank"
+            variant="subtle"
+            size="sm"
+          >
+            <IconBrandXing size={18} />
+          </ActionIcon>
+        </Group>
+      )}
     </Card>
   );
 };

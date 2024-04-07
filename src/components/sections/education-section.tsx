@@ -25,8 +25,8 @@ const EducationSection = ({
               </Text>
             </Group>
           </Group>
-          <Text>{edu.area}</Text>
-          <Text size="sm" variant="gradient">{edu.studyType}</Text>
+          <Text >{edu.area}</Text>
+          <Text c="dimmed" fw={500} size="sm" fs="italic">{edu.studyType}</Text>
         </Paper>
       ))}
     </Card>
