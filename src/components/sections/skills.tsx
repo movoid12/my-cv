@@ -6,21 +6,13 @@ export const Skills = ({ skills }: { skills?: Skill[] }) => {
     <Card>
       <Title order={3}>Skills</Title>
       <Space h="md" />
-      {skills?.map((skill, index) => (
-        <div key={index}>
-          <Text size="sm" style={{ marginBottom: 10 }}>
-            ✦ {skill.name}
-          </Text>
-          <Group gap="xs">
-            {skill.keywords.map((keyword, keywordIndex) => (
-              <Badge key={keywordIndex} color="dark" variant="light">
-                {keyword}
-              </Badge>
-            ))}
-          </Group>
-          <Space h="md" />
-        </div>
-      ))}
+      <Group gap="xs" wrap="wrap">
+        {skills?.map((skill, index) => (
+          <Badge key={index} color="dark" variant="light">
+            {skill}
+          </Badge>
+        ))}
+      </Group>
     </Card>
   );
 };

@@ -52,10 +52,5 @@
       "location": "Leipzig, Germany"
     }
   ],
-  "skills": [
-    {
-      "name": "Innovation",
-      "keywords": ["Product Development", "Marketing", "Leadership"]
-    }
-  ]
+  "skills": ["Product Development", "Marketing", "Leadership"]
 }

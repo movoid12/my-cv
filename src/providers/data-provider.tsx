@@ -1,5 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
-import useSWR from "swr";
+import React, { createContext, useContext} from "react";
 import useSWRImmutable from "swr/immutable";
 
 type SocialLink = {
@@ -32,19 +31,16 @@ export type WorkExperience = {
   startDate: string;
   endDate: string;
   summary: string;
-  location: string
+  location: string;
 };
 
-export type Skill = {
-  name: string;
-  keywords: string[];
-};
+export type Skill = string[];
 
 type ResumeData = {
   basics: Basics;
   education: Education[];
   work: WorkExperience[];
-  skills: Skill[];
+  skills: Skill;
 };
 
 interface PortfolioContextData {
@@ -69,7 +65,10 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
     data,
     error,
     isLoading: loading,
-  } = useSWRImmutable("http://localhost:5173/assets/portfolio.json", fetcher, { suspense: true, revalidateOnFocus: true });
+  } = useSWRImmutable("http://localhost:5173/assets/portfolio.json", fetcher, {
+    suspense: true,
+    revalidateOnFocus: true,
+  });
 
   return (
     <PortfolioContext.Provider value={{ data, loading, error }}>
