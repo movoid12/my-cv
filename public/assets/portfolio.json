@@ -52,5 +52,29 @@
       "location": "Leipzig, Germany"
     }
   ],
-  "skills": ["Product Development", "Marketing", "Leadership"]
+  "skills": ["Web Engineering", "TypeScript", "Node.js"],
+  "projects": [
+    {
+      "name": "Berufsschulzentrum 7 Leipzig",
+      "description": "Duale Berufsausbildung - IHK Leipzig"
+    },
+    {
+      "name": "Kiron Open Higher Education",
+      "description": "University Prep."
+    }
+  ],
+  "languages": [
+    {
+      "name": "German",
+      "level": "Full Professional"
+    },
+    {
+      "name": "Arabic",
+      "description": "Native"
+    },
+    {
+      "name": "English",
+      "description": "Professional Working"
+    }
+  ]
 }

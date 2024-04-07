@@ -1,16 +1,7 @@
 import { Card, Group, Paper, Space, Text, Title } from "@mantine/core";
+import { type Education } from "../../providers/data-provider";
 
-export default function Education({
-  education,
-}: {
-  education?: {
-    institution: string;
-    area: string;
-    studyType: string;
-    startDate: string;
-    endDate: string;
-  }[];
-}) {
+export default function Education({ education }: { education?: Education[] }) {
   return (
     <Card>
       <Title order={3}>Education</Title>

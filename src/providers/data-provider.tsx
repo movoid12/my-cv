@@ -1,10 +1,10 @@
-import React, { createContext, useContext} from "react";
+import React, { createContext, useContext } from "react";
 import useSWRImmutable from "swr/immutable";
 
 type SocialLink = {
   linkedin: string;
   github: string;
-  xing: string;
+  xing?: string;
 };
 
 export type Basics = {
@@ -36,11 +36,17 @@ export type WorkExperience = {
 
 export type Skill = string[];
 
+export type Project = {
+  name: string;
+  description: string;
+};
+
 type ResumeData = {
   basics: Basics;
   education: Education[];
-  work: WorkExperience[];
+  projects: Project[]
   skills: Skill;
+  work: WorkExperience[];
 };
 
 interface PortfolioContextData {

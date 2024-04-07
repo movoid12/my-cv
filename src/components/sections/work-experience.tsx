@@ -1,16 +1,10 @@
 import { Card, Group, Paper, Space, Text, Title } from "@mantine/core";
+import { type WorkExperience } from "../../providers/data-provider";
 
 export default function WorkExperience({
   experiences,
 }: {
-  experiences?: {
-    company: string;
-    position: string;
-    startDate: string;
-    endDate?: string;
-    summary?: string;
-    location?: string;
-  }[];
+  experiences?: WorkExperience[];
 }) {
   return (
     <Card>
@@ -27,8 +21,12 @@ export default function WorkExperience({
             </Group>
           </Group>
           <Text>{exp.position}</Text>
-          <Text c="dimmed" fw={500} size="sm" fs="italic">{exp.summary}</Text>
-          <Text c="teal" fw={500} size="sm" fs="italic">{exp.location}</Text>
+          <Text c="dimmed" fw={500} size="sm" fs="italic">
+            {exp.summary}
+          </Text>
+          <Text c="teal" fw={500} size="sm" fs="italic">
+            {exp.location}
+          </Text>
         </Paper>
       ))}
     </Card>

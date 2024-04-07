@@ -1,4 +1,4 @@
-import { Badge, Card, Group, Space, Title, Text } from "@mantine/core";
+import { Badge, Card, Group, Space, Title } from "@mantine/core";
 import { Skill } from "../../providers/data-provider";
 
 export const Skills = ({ skills }: { skills?: Skill[] }) => {
