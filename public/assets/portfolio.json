@@ -1,23 +1,29 @@
 {
   "basics": {
-    "name": "Steve Jobs",
-    "label": "Full Stack Engineer focused on building products with extra attention to detail. Full Stack Engineer focused on building products with extra attention to detail",
-    "image": "url_to_steve_jobs_image",
-    "email": "steve.jobs@apple.com",
+    "name": "Mouaz Aldakkak",
+    "label": "I am a full-stack developer focusing on front-end web development, using TypeScript and React.",
+    "image": "url_to_image",
+    "email": "example@icloud.com",
     "phone": "(123) 456-7890",
-    "address": "Esmarchstr. 59, Gramsberg, ST 43244",
-    "location_link": "https://www.google.com/maps/place/Wrocław",
-    "linkedin": "https://www.linkedin.com/in/stevejobs",
-    "github": "https://github.com/stevejobs",
-    "xing": "https://www.xing.com/profile/Steve_Jobs"
+    "address": "Leipzig, Germany",
+    "location_link": "https://www.google.com/maps/place/Leipzig",
+    "linkedin": "https://www.linkedin.com/in/mouaz-aldakkak-45b17280",
+    "github": "https://github.com/movoid12"
   },
   "education": [
     {
-      "institution": "Reed College",
-      "area": "Physics, Literature, and Poetry",
-      "studyType": "Dropout",
-      "startDate": "1972-01-01",
-      "endDate": "1972-01-01"
+      "institution": "Berufsschulzentrum 7 Leipzig",
+      "area": "Duale Berufsausbildung - IHK Leipzig",
+      "studyType": "Computer Science - Software Development",
+      "startDate": "2019",
+      "endDate": "2022"
+    },
+    {
+      "institution": "Kiron Open Higher Education",
+      "area": "University Prep.",
+      "studyType": "Computer Science",
+      "startDate": "2019",
+      "endDate": "2022"
     }
   ],
   "work": [

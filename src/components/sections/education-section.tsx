@@ -16,7 +16,7 @@ const EducationSection = ({
       <Title order={3}>Education</Title>
       <Space h="md" />
       {education?.map((edu, index) => (
-        <Paper key={index}>
+        <Paper key={index} mt="sm" mb="sm">
           <Group gap="xl" grow>
             <Text fw="bold">{edu.institution}</Text>
             <Group justify="flex-end">
@@ -26,6 +26,7 @@ const EducationSection = ({
             </Group>
           </Group>
           <Text>{edu.area}</Text>
+          <Text size="sm" variant="gradient">{edu.studyType}</Text>
         </Paper>
       ))}
     </Card>
