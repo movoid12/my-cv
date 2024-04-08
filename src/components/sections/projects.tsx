@@ -19,6 +19,7 @@ export default function Projects({ projects }: { projects?: PersonProject[] }) {
             description={project.description}
             imageSrc={project.imageSrc}
             projectUrl={project.projectUrl}
+            isActive={project.online}
           />
         ))}
       </SimpleGrid>

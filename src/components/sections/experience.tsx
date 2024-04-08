@@ -1,4 +1,4 @@
-import { Card, Group, Paper, Space, Text, Title } from '@mantine/core';
+import { Card, Group, Paper, Text, Title } from '@mantine/core';
 import type { PersonExperience } from '../../providers/data-provider';
 
 export default function Experience({
@@ -9,7 +9,6 @@ export default function Experience({
   return (
     <Card>
       <Title order={3}>Work Experience</Title>
-      <Space h="md" />
       {experiences?.map((exp) => (
         <Paper key={exp.id} mt="sm" mb="sm">
           <Group gap="xl" grow>
