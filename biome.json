@@ -1,0 +1,49 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.6.4/schema.json",
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "correctness": {
+        "noUnusedImports": "error",
+        "noUnusedVariables": "error",
+        "useHookAtTopLevel": "error"
+      },
+      "style": {
+        "noNegationElse": "warn",
+        "useBlockStatements": "warn",
+        "useCollapsedElseIf": "warn",
+        "useFilenamingConvention": {
+          "level": "warn",
+          "options": {
+            "filenameCases": ["kebab-case"]
+          }
+        },
+        "useForOf": "warn",
+        "useFragmentSyntax": "warn",
+        "useNamingConvention": "warn",
+        "useShorthandAssign": "warn",
+        "useSingleCaseStatement": "warn"
+      },
+      "suspicious": {
+        "noConsoleLog": "warn",
+        "noEmptyBlockStatements": "warn",
+        "useAwait": "warn"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single"
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "indentWidth": 2,
+    "indentStyle": "space"
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  }
+}

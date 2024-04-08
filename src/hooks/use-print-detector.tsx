@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const usePrintDetector = (): [boolean, () => void] => {
   const [isPrinting, setIsPrinting] = useState(false);
@@ -10,15 +10,16 @@ const usePrintDetector = (): [boolean, () => void] => {
 
     const handleAfterPrint = () => {
       setIsPrinting(false);
-      console.log("Print operation completed");
+      // biome-ignore lint/suspicious/noConsoleLog: <explanation>
+      console.log('Print operation completed');
     };
 
-    window.addEventListener("beforeprint", handleBeforePrint);
-    window.addEventListener("afterprint", handleAfterPrint);
+    window.addEventListener('beforeprint', handleBeforePrint);
+    window.addEventListener('afterprint', handleAfterPrint);
 
     return () => {
-      window.removeEventListener("beforeprint", handleBeforePrint);
-      window.removeEventListener("afterprint", handleAfterPrint);
+      window.removeEventListener('beforeprint', handleBeforePrint);
+      window.removeEventListener('afterprint', handleAfterPrint);
     };
   }, []);
 

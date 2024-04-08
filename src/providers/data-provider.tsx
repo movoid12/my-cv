@@ -1,5 +1,8 @@
-import React, { createContext, useContext } from "react";
-import useSWRImmutable from "swr/immutable";
+import type React from 'react';
+import { createContext, useContext } from 'react';
+
+// biome-ignore lint/style/useNamingConvention: <explanation>
+import useSWRImmutable from 'swr/immutable';
 
 type SocialLink = {
   linkedin: string;
@@ -7,17 +10,18 @@ type SocialLink = {
   xing?: string;
 };
 
-export type Basics = {
+export type PersonBasics = {
   name: string;
   label: string;
   image: string;
   email: string;
   phone: string;
   address: string;
-  location_link: string;
+  locationLink: string;
 } & SocialLink;
 
-export type Education = {
+export type PersonEducation = {
+  id: number;
   institution: string;
   area: string;
   studyType: string;
@@ -25,7 +29,8 @@ export type Education = {
   endDate: string;
 };
 
-export type WorkExperience = {
+export type PersonExperience = {
+  id: number;
   company: string;
   position: string;
   startDate: string;
@@ -34,26 +39,27 @@ export type WorkExperience = {
   location: string;
 };
 
-export type Skill = string[];
+export type PersonSkill = string[];
 
-export type Project = {
+export type PersonProject = {
+  id: number;
   name: string;
   description: string;
 };
 
 type ResumeData = {
-  basics: Basics;
-  education: Education[];
-  projects: Project[]
-  skills: Skill;
-  work: WorkExperience[];
+  basics: PersonBasics;
+  education: PersonEducation[];
+  projects: PersonProject[];
+  skills: PersonSkill[];
+  work: PersonExperience[];
 };
 
-interface PortfolioContextData {
+type PortfolioContextData = {
   data: ResumeData | null;
   loading: boolean;
   error: string | null;
-}
+};
 
 const PortfolioContext = createContext<PortfolioContextData>({
   data: null,
@@ -61,17 +67,15 @@ const PortfolioContext = createContext<PortfolioContextData>({
   error: null,
 });
 
-const fetcher = (url: RequestInfo | URL) =>
-  fetch(url).then((res) => res.json());
+export function DataProvider({ children }: { children: React.ReactNode }) {
+  const fetcher = (url: RequestInfo | URL) =>
+    fetch(url).then((res) => res.json());
 
-export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
   const {
     data,
     error,
     isLoading: loading,
-  } = useSWRImmutable("http://localhost:5173/assets/portfolio.json", fetcher, {
+  } = useSWRImmutable('http://localhost:5173/assets/portfolio.json', fetcher, {
     suspense: true,
     revalidateOnFocus: true,
   });
@@ -81,6 +85,6 @@ export const DataProvider: React.FC<{ children: React.ReactNode }> = ({
       {children}
     </PortfolioContext.Provider>
   );
-};
+}
 
 export const usePortfolioData = () => useContext(PortfolioContext);

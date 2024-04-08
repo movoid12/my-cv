@@ -1,4 +1,4 @@
-import { Card, Text, Group, Title, ActionIcon, Stack } from "@mantine/core";
+import { Card, Text, Group, Title, ActionIcon, Stack } from '@mantine/core';
 import {
   IconBrandLinkedin,
   IconBrandGithubFilled,
@@ -6,12 +6,12 @@ import {
   IconPhoneCall,
   IconMail,
   IconWorld,
-} from "@tabler/icons-react";
-import { type Basics } from "../../providers/data-provider";
-import usePrintDetector from "../../hooks/use-print-detector";
+} from '@tabler/icons-react';
+import type { PersonBasics } from '../../providers/data-provider';
+import usePrintDetector from '../../hooks/use-print-detector';
 
-export const About = ({ basics }: { basics?: Basics }) => {
-  const [ isPrinting ] = usePrintDetector();
+export const About = ({ basics }: { basics?: PersonBasics }) => {
+  const [isPrinting] = usePrintDetector();
 
   return (
     <Card>
@@ -30,7 +30,7 @@ export const About = ({ basics }: { basics?: Basics }) => {
           color="gray"
           radius="xl"
           size="sm"
-          href={`${basics?.location_link}`}
+          href={`${basics?.locationLink}`}
         >
           <IconWorld size={18} />
         </ActionIcon>

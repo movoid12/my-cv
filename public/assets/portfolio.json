@@ -12,6 +12,7 @@
   },
   "education": [
     {
+      "id": 1,
       "institution": "Berufsschulzentrum 7 Leipzig",
       "area": "Duale Berufsausbildung - IHK Leipzig",
       "studyType": "Computer Science - Software Development",
@@ -19,6 +20,7 @@
       "endDate": "2022"
     },
     {
+      "id": 2,
       "institution": "Kiron Open Higher Education",
       "area": "University Prep.",
       "studyType": "Computer Science",
@@ -28,6 +30,7 @@
   ],
   "work": [
     {
+      "id": 1,
       "company": "ETECTURE GmbH",
       "position": "Software Developer",
       "startDate": "2022-11",
@@ -36,6 +39,7 @@
       "location": "Frankfurt am Main, Hesse, Germany (Remote)"
     },
     {
+      "id": 2,
       "company": "zwonull media",
       "position": "Junior Software Developer",
       "startDate": "2022-7",
@@ -44,6 +48,7 @@
       "location": "Leipzig, Germany"
     },
     {
+      "id": 3,
       "company": "zwonull media",
       "position": "Trainee in Web-Engineering",
       "startDate": "2019-02",
@@ -55,24 +60,29 @@
   "skills": ["Web Engineering", "TypeScript", "Node.js"],
   "projects": [
     {
+      "id": 1,
       "name": "Berufsschulzentrum 7 Leipzig",
       "description": "Duale Berufsausbildung - IHK Leipzig"
     },
     {
+      "id": 2,
       "name": "Kiron Open Higher Education",
       "description": "University Prep."
     }
   ],
   "languages": [
     {
+      "id": 1,
       "name": "German",
       "level": "Full Professional"
     },
     {
+      "id": 2,
       "name": "Arabic",
       "description": "Native"
     },
     {
+      "id": 3,
       "name": "English",
       "description": "Professional Working"
     }
