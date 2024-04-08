@@ -23,7 +23,7 @@ export default function Experience({
           <Text c="dimmed" fw={500} size="sm" fs="italic">
             {exp.summary}
           </Text>
-          <Text c="teal" fw={500} size="xs" >
+          <Text c="teal" fw={500} size="xs">
             {exp.location}
           </Text>
         </Paper>

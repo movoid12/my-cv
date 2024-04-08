@@ -45,5 +45,8 @@
     "enabled": true,
     "clientKind": "git",
     "useIgnoreFile": true
+  },
+  "organizeImports": {
+    "enabled": true
   }
 }

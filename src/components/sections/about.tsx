@@ -1,23 +1,24 @@
 import {
-  Card,
-  Text,
-  Group,
-  Title,
   ActionIcon,
-  Stack,
   Avatar,
+  Card,
   Flex,
+  Group,
+  Stack,
+  Text,
+  Title,
 } from '@mantine/core';
 import {
-  IconBrandLinkedin,
   IconBrandGithubFilled,
+  IconBrandLinkedin,
   IconBrandXing,
-  IconPhoneCall,
   IconMail,
+  IconPhoneCall,
   IconWorld,
 } from '@tabler/icons-react';
-import type { PersonBasics } from '../../providers/data-provider';
+
 import usePrintDetector from '../../hooks/use-print-detector';
+import type { PersonBasics } from '../../providers/data-provider';
 
 export default function About({ basics }: { basics?: PersonBasics }) {
   const { isPrinting } = usePrintDetector();
