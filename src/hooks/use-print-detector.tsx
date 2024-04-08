@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const usePrintDetector = (): [boolean, () => void] => {
+const usePrintDetector = () => {
   const [isPrinting, setIsPrinting] = useState(false);
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const usePrintDetector = (): [boolean, () => void] => {
     window.print();
   };
 
-  return [isPrinting, triggerPrint];
+  return { isPrinting, triggerPrint };
 };
 
 export default usePrintDetector;

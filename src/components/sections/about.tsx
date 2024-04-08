@@ -10,8 +10,8 @@ import {
 import type { PersonBasics } from '../../providers/data-provider';
 import usePrintDetector from '../../hooks/use-print-detector';
 
-export const About = ({ basics }: { basics?: PersonBasics }) => {
-  const [isPrinting] = usePrintDetector();
+export default function About({ basics }: { basics?: PersonBasics }) {
+  const { isPrinting } = usePrintDetector();
 
   return (
     <Card>
@@ -46,6 +46,7 @@ export const About = ({ basics }: { basics?: PersonBasics }) => {
             target="_blank"
             variant="subtle"
             size="sm"
+            c="teal"
           >
             <IconMail size={18} />
           </ActionIcon>
@@ -55,6 +56,7 @@ export const About = ({ basics }: { basics?: PersonBasics }) => {
             target="_blank"
             variant="subtle"
             size="sm"
+            c="teal"
           >
             <IconPhoneCall size={18} />
           </ActionIcon>
@@ -64,6 +66,7 @@ export const About = ({ basics }: { basics?: PersonBasics }) => {
             target="_blank"
             variant="subtle"
             size="sm"
+            c="teal"
           >
             <IconBrandLinkedin size={18} />
           </ActionIcon>
@@ -73,20 +76,24 @@ export const About = ({ basics }: { basics?: PersonBasics }) => {
             target="_blank"
             variant="subtle"
             size="sm"
+            c="teal"
           >
             <IconBrandGithubFilled size={18} />
           </ActionIcon>
-          <ActionIcon
-            component="a"
-            href={basics?.xing}
-            target="_blank"
-            variant="subtle"
-            size="sm"
-          >
-            <IconBrandXing size={18} />
-          </ActionIcon>
+          {basics?.xing && (
+            <ActionIcon
+              component="a"
+              href={basics?.xing}
+              target="_blank"
+              variant="subtle"
+              size="sm"
+              c="teal"
+            >
+              <IconBrandXing size={18} />
+            </ActionIcon>
+          )}
         </Group>
       )}
     </Card>
   );
-};
+}

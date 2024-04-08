@@ -1,7 +1,7 @@
 {
   "basics": {
     "name": "Mouaz Aldakkak",
-    "label": "I am a full-stack developer focusing on front-end web development, using TypeScript and React.",
+    "label": "I am a full-stack developer focusing on front-end web development, I work mostly with TypeScript, React, Node.js",
     "image": "url_to_image",
     "email": "example@icloud.com",
     "phone": "(123) 456-7890",
@@ -57,17 +57,42 @@
       "location": "Leipzig, Germany"
     }
   ],
-  "skills": ["Web Engineering", "TypeScript", "Node.js"],
+  "skills": [
+    "Web Engineering",
+    "TypeScript",
+    "Node.js",
+    "JavaScript",
+    "React",
+    "Wordpress",
+    "MySQL",
+    "NoSQL",
+    "Firebase",
+    "AWS Services"
+  ],
   "projects": [
     {
       "id": 1,
-      "name": "Berufsschulzentrum 7 Leipzig",
-      "description": "Duale Berufsausbildung - IHK Leipzig"
+      "name": "Unterwegs",
+      "description": "Side-Project, Wordpress, CMS, Updates/maintenance, JavaScript, CSS, HTML5, Linux Server, MySQL",
+      "projectUrl": "https://www.unterwegs-und-angekommen.de/",
+      "imageSrc": "https://www.unterwegs-und-angekommen.de/wp-content/uploads/2021/12/Logo_UuA_mit_Schrift.jpg",
+      "online": true
     },
     {
       "id": 2,
-      "name": "Kiron Open Higher Education",
-      "description": "University Prep."
+      "name": "Bestokoko",
+      "description": "Side-Project, Wordpress, CMS, Updates/maintenance, MySQL, HTML5, JavaScript, CSS",
+      "projectUrl": "https://bestokoko.de/",
+      "imageSrc": "https://bestokoko.de/wp-content/uploads/2021/10/1003mal753.png",
+      "online": true
+    },
+    {
+      "id": 3,
+      "name": "Social Cooking",
+      "description": "Side-Project, Bootstrap, CSS, HTML5, JavaScript",
+      "projectUrl": "https://movoid.alwaysdata.net/",
+      "imageSrc": "https://movoid.alwaysdata.net/img/logo2.png",
+      "online": true
     }
   ],
   "languages": [

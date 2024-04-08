@@ -1,7 +1,7 @@
 import { Badge, Card, Group, Space, Title } from '@mantine/core';
 import type { PersonSkill } from '../../providers/data-provider';
 
-export const Skills = ({ skills }: { skills?: PersonSkill[] }) => {
+export default function Skills({ skills }: { skills?: PersonSkill[] }) {
   return (
     <Card>
       <Title order={3}>Skills</Title>
@@ -16,4 +16,4 @@ export const Skills = ({ skills }: { skills?: PersonSkill[] }) => {
       </Group>
     </Card>
   );
-};
+}

@@ -1,6 +1,6 @@
 import { Box, Center, Loader } from '@mantine/core';
 
-export default function Loading() {
+export default function LoadingSpinner() {
   return (
     <Box pos="relative">
       <Center mt="10rem">

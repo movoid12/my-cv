@@ -11,11 +11,11 @@ export default function Education({
       <Title order={3}>Education</Title>
       <Space h="md" />
       {education?.map((edu) => (
-        <Paper key={edu.area} mt="sm" mb="sm">
+        <Paper key={edu.id} mt="sm" mb="sm">
           <Group gap="xl" grow>
             <Text fw="bold">{edu.institution}</Text>
             <Group justify="flex-end">
-              <Text size="xs">
+              <Text size="xs" fw="500">
                 {edu.startDate} - {edu.endDate}
               </Text>
             </Group>

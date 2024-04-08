@@ -4,7 +4,7 @@ import { MantineProvider } from '@mantine/core';
 
 import { theme } from './theme';
 import App from './app.tsx';
-import Loading from './components/ui/loading.tsx';
+import LoadingSpinner from './components/ui/loading-spinner.tsx';
 
 import '@mantine/core/styles.css';
 
@@ -17,7 +17,7 @@ if (!rootElement) {
 reactDom.createRoot(rootElement).render(
   <React.StrictMode>
     <MantineProvider theme={theme}>
-      <Suspense fallback={<Loading />}>
+      <Suspense fallback={<LoadingSpinner />}>
         <App />
       </Suspense>
     </MantineProvider>

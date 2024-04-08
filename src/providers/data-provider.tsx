@@ -45,11 +45,21 @@ export type PersonProject = {
   id: number;
   name: string;
   description: string;
+  projectUrl: string;
+  imageSrc: string;
+  online: boolean;
+};
+
+export type PersonLanguage = {
+  id: number;
+  name: string;
+  level: string;
 };
 
 type ResumeData = {
   basics: PersonBasics;
   education: PersonEducation[];
+  langauges: PersonLanguage[];
   projects: PersonProject[];
   skills: PersonSkill[];
   work: PersonExperience[];
@@ -66,18 +76,16 @@ const PortfolioContext = createContext<PortfolioContextData>({
   loading: true,
   error: null,
 });
+const fetcher = (url: RequestInfo | URL) =>
+  fetch(url).then((res) => res.json());
 
 export function DataProvider({ children }: { children: React.ReactNode }) {
-  const fetcher = (url: RequestInfo | URL) =>
-    fetch(url).then((res) => res.json());
-
   const {
     data,
     error,
     isLoading: loading,
-  } = useSWRImmutable('http://localhost:5173/assets/portfolio.json', fetcher, {
+  } = useSWRImmutable('http://127.0.0.1:5173/assets/portfolio.json', fetcher, {
     suspense: true,
-    revalidateOnFocus: true,
   });
 
   return (

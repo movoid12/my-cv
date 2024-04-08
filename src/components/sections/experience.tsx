@@ -15,7 +15,7 @@ export default function Experience({
           <Group gap="xl" grow>
             <Text fw="bold">{exp.company}</Text>
             <Group justify="flex-end">
-              <Text size="xs">
+              <Text size="xs" fw="500">
                 {exp.startDate} - {exp.endDate}
               </Text>
             </Group>
