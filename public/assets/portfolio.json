@@ -73,7 +73,7 @@
     {
       "id": 1,
       "name": "Unterwegs",
-      "description": "Side-Project, Wordpress, CMS, Updates/maintenance, JavaScript, CSS, HTML5, Linux Server, MySQL",
+      "description": "Side Project, Wordpress, CMS, Updates/maintenance, JavaScript, CSS, HTML5, Linux Server, MySQL",
       "projectUrl": "https://www.unterwegs-und-angekommen.de/",
       "imageSrc": "https://www.unterwegs-und-angekommen.de/wp-content/uploads/2021/12/Logo_UuA_mit_Schrift.jpg",
       "online": true
@@ -81,7 +81,7 @@
     {
       "id": 2,
       "name": "Bestokoko",
-      "description": "Side-Project, Wordpress, CMS, Updates/maintenance, MySQL, HTML5, JavaScript, CSS",
+      "description": "Side Project, Wordpress, CMS, Updates/maintenance, MySQL, HTML5, JavaScript, CSS",
       "projectUrl": "https://bestokoko.de/",
       "imageSrc": "https://bestokoko.de/wp-content/uploads/2021/10/1003mal753.png",
       "online": true
@@ -89,9 +89,17 @@
     {
       "id": 3,
       "name": "Social Cooking",
-      "description": "Side-Project, Bootstrap, CSS, HTML5, JavaScript",
+      "description": "Side Project, Bootstrap, CSS, HTML5, JavaScript",
       "projectUrl": "https://movoid.alwaysdata.net/",
       "imageSrc": "https://movoid.alwaysdata.net/img/logo2.png",
+      "online": true
+    },
+    {
+      "id": 4,
+      "name": "Sustain Legal - Law Service",
+      "description": "Side Project, Wordpress, Updates/maintenance, CMS, CSS, HTML5, JavaScript, SEO",
+      "projectUrl": "https://sustainlegal.de/",
+      "imageSrc": "https://www.anwalt.de/image/company/fit-dimensions/logo_offical_6410da0e644e48.86772540.png",
       "online": true
     }
   ],

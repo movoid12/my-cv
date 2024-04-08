@@ -1,4 +1,13 @@
-import { Card, Text, Group, Title, ActionIcon, Stack } from '@mantine/core';
+import {
+  Card,
+  Text,
+  Group,
+  Title,
+  ActionIcon,
+  Stack,
+  Avatar,
+  Flex,
+} from '@mantine/core';
 import {
   IconBrandLinkedin,
   IconBrandGithubFilled,
@@ -19,23 +28,28 @@ export default function About({ basics }: { basics?: PersonBasics }) {
         <Title order={3} fw="bold">
           {basics?.name}
         </Title>
-
-        <Text size="sm">{basics?.label}</Text>
+        <Flex direction="row" gap={{ base: 'sm', sm: 'lg' }}>
+          <Text size="sm">{basics?.label}</Text>
+          <Avatar
+            size="xl"
+            src="https://avatars.githubusercontent.com/u/87415713?v=4"
+          />
+        </Flex>
       </Stack>
 
       <Group gap="xs" mt="0.5em">
         <ActionIcon
           component="a"
-          variant="transparent"
+          variant="light"
           color="gray"
-          radius="xl"
           size="sm"
           href={`${basics?.locationLink}`}
         >
           <IconWorld size={18} />
         </ActionIcon>
-
-        <Text size="xs">{basics?.address}</Text>
+        <Text size="xs" fw="500">
+          {basics?.address}
+        </Text>
       </Group>
 
       {!isPrinting && (

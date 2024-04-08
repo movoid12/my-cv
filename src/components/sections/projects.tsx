@@ -31,7 +31,7 @@ export default function Projects({ projects }: { projects?: PersonProject[] }) {
           >
             <Card.Section withBorder>
               <Image
-                fit="cover"
+                fit="scale-down"
                 src={project.imageSrc}
                 fallbackSrc="https://placehold.co/600x400?text=Placeholder"
                 h={120}
