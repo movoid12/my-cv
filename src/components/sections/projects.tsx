@@ -1,13 +1,6 @@
-import {
-  Card,
-  Image,
-  Indicator,
-  SimpleGrid,
-  Space,
-  Text,
-  Title,
-} from '@mantine/core';
+import { Card, SimpleGrid, Space, Title } from '@mantine/core';
 import type { PersonProject } from '../../providers/data-provider';
+import CustomCard from '../ui/custom-card';
 
 export default function Projects({ projects }: { projects?: PersonProject[] }) {
   return (
@@ -20,39 +13,13 @@ export default function Projects({ projects }: { projects?: PersonProject[] }) {
         verticalSpacing={{ base: 'md', sm: 'xl' }}
       >
         {projects?.map((project) => (
-          <Card
-            withBorder
-            radius="lg"
-            shadow="md"
-            component="a"
-            href={project.projectUrl}
-            target="_blank"
-            key={project.id}
-          >
-            <Card.Section withBorder>
-              <Image
-                fit="scale-down"
-                src={project.imageSrc}
-                fallbackSrc="https://placehold.co/600x400?text=Placeholder"
-                h={120}
-                alt="No way!"
-              />
-            </Card.Section>
-
-            <Text fw={500} size="md" mt="md" c="dark">
-              <Indicator
-                color={project.online ? 'green' : 'red'}
-                position="middle-end"
-                size={5}
-                processing
-              />
-              {project.name}
-            </Text>
-
-            <Text mt="xs" c="dimmed" size="xs">
-              {project.description}
-            </Text>
-          </Card>
+          <CustomCard
+            projectKey={project.id}
+            name={project.name}
+            description={project.description}
+            imageSrc={project.imageSrc}
+            projectUrl={project.projectUrl}
+          />
         ))}
       </SimpleGrid>
     </Card>
