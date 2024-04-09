@@ -1,4 +1,4 @@
-import { Card, Group, Paper, Text, Title } from '@mantine/core';
+import { Box, Card, Group, Text, Title } from '@mantine/core';
 import type { PersonEducation } from '../../providers/data-provider';
 
 export default function Education({
@@ -10,7 +10,7 @@ export default function Education({
     <Card>
       <Title order={3}>Education</Title>
       {education?.map((edu) => (
-        <Paper key={edu.id} mt="sm" mb="sm">
+        <Box key={edu.id} pt="md">
           <Group gap="xl" grow>
             <Text fw="bold">{edu.institution}</Text>
             <Group justify="flex-end">
@@ -23,7 +23,7 @@ export default function Education({
           <Text c="dimmed" fw={500} size="sm" fs="italic">
             {edu.studyType}
           </Text>
-        </Paper>
+        </Box>
       ))}
     </Card>
   );
