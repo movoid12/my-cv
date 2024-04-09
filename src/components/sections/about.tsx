@@ -29,7 +29,11 @@ export default function About({ basics }: { basics?: PersonBasics }) {
         <Title order={3} fw="bold">
           {basics?.name}
         </Title>
-        <Flex direction="row" gap={{ base: 'sm', sm: 'lg' }}>
+        <Flex
+          direction="row"
+          gap={{ base: 'sm', sm: 'lg' }}
+          justify="space-between"
+        >
           <Text size="sm">{basics?.label}</Text>
           <Avatar
             size="xl"
