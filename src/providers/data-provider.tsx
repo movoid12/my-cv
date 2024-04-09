@@ -1,6 +1,5 @@
 import type React from 'react';
 import { createContext, useContext } from 'react';
-
 // biome-ignore lint/style/useNamingConvention: <explanation>
 import useSWRImmutable from 'swr/immutable';
 
@@ -59,7 +58,7 @@ export type PersonLanguage = {
 type ResumeData = {
   basics: PersonBasics;
   education: PersonEducation[];
-  langauges: PersonLanguage[];
+  lang: PersonLanguage[];
   projects: PersonProject[];
   skills: PersonSkill[];
   work: PersonExperience[];
@@ -84,9 +83,13 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     data,
     error,
     isLoading: loading,
-  } = useSWRImmutable('http://127.0.0.1:5173/assets/portfolio.json', fetcher, {
-    suspense: true,
-  });
+  } = useSWRImmutable(
+    'https://scaling-spork-pqg7jwxjp5626wwx-5173.app.github.dev/assets/portfolio.json',
+    fetcher,
+    {
+      suspense: true,
+    },
+  );
 
   return (
     <PortfolioContext.Provider value={{ data, loading, error }}>

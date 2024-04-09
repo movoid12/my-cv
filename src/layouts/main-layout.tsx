@@ -3,6 +3,7 @@ import { Container } from '@mantine/core';
 import About from '../components/sections/about';
 import Education from '../components/sections/education';
 import Experience from '../components/sections/experience';
+import Language from '../components/sections/language';
 import Projects from '../components/sections/projects';
 import Skills from '../components/sections/skills';
 import { usePortfolioData } from '../providers/data-provider';
@@ -17,6 +18,7 @@ export default function MainLayout() {
       <Education education={data?.education} />
       <Skills skills={data?.skills} />
       <Projects projects={data?.projects} />
+      <Language langauges={data?.lang} />
     </Container>
   );
 }

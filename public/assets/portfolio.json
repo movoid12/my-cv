@@ -103,21 +103,21 @@
       "online": true
     }
   ],
-  "languages": [
+  "lang": [
     {
       "id": 1,
       "name": "German",
       "level": "Full Professional"
     },
     {
-      "id": 2,
-      "name": "Arabic",
-      "description": "Native"
-    },
-    {
       "id": 3,
       "name": "English",
-      "description": "Professional Working"
+      "level": "Professional Working"
+    },
+    {
+      "id": 2,
+      "name": "Arabic",
+      "level": "Native"
     }
   ]
 }
