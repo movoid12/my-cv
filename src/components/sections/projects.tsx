@@ -14,7 +14,7 @@ export default function Projects({ projects }: { projects?: PersonProject[] }) {
       >
         {projects?.map((project) => (
           <CustomCard
-            projectKey={project.id}
+            key={project.id}
             name={project.name}
             description={project.description}
             imageSrc={project.imageSrc}

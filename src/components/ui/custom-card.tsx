@@ -1,20 +1,23 @@
 import { Card, Image, Indicator, Text } from '@mantine/core';
 
 export default function CustomCard({
-  projectKey,
   projectUrl,
   imageSrc,
   isActive,
   name,
   description,
 }: {
-  projectKey: number;
   projectUrl?: string;
   imageSrc?: string;
   isActive?: boolean;
   name: string;
   description: string;
 }) {
+  //   <AppShell
+  //   header={{ height: 60 }}
+  //   navbar={{ width: 300, breakpoint: 'sm', collapsed: { desktop: true, mobile: !opened } }}
+  //   padding="md"
+  // >
   return (
     <Card
       withBorder
@@ -23,7 +26,6 @@ export default function CustomCard({
       component="a"
       href={projectUrl}
       target="_blank"
-      key={projectKey}
     >
       <Card.Section withBorder>
         <Image
@@ -36,14 +38,13 @@ export default function CustomCard({
       </Card.Section>
 
       <Text fw={500} size="md" mt="md" c="dark">
-        <Indicator
-          color={isActive ? 'green' : 'red'}
-          position="middle-end"
-          size={5}
-        />
         {name}
       </Text>
-
+      <Indicator
+        color={isActive ? 'green' : 'red'}
+        position="top-end"
+        size="7"
+      />
       <Text mt="xs" c="dimmed" size="xs">
         {description}
       </Text>
