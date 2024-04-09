@@ -1,12 +1,4 @@
-import { IconMoon, IconSun } from '@tabler/icons-react';
-import {
-  ActionIcon,
-  Container,
-  useComputedColorScheme,
-  useMantineColorScheme,
-} from '@mantine/core';
-import cx from 'clsx';
-import classes from './main.module.css';
+import { AppShell, Burger, Container, Group } from '@mantine/core';
 
 import About from '../components/sections/about';
 import Education from '../components/sections/education';
@@ -15,34 +7,57 @@ import Language from '../components/sections/language';
 import Projects from '../components/sections/projects';
 import Skills from '../components/sections/skills';
 import { usePortfolioData } from '../providers/data-provider';
+import { useDisclosure } from '@mantine/hooks';
+import ColorSchemeButton from '../components/ui/color-scheme-button';
+import usePrintDetector from '../hooks/use-print-detector';
 
 export default function MainLayout() {
   const { data } = usePortfolioData();
 
-  const { setColorScheme } = useMantineColorScheme();
-  const computedColorScheme = useComputedColorScheme('light', {
-    getInitialValueInEffect: true,
-  });
+  const { isPrinting } = usePrintDetector();
+
+  const [opened, { toggle }] = useDisclosure();
 
   return (
-    <Container size="md" pt={50}>
-      <ActionIcon
-        onClick={() =>
-          setColorScheme(computedColorScheme === 'light' ? 'dark' : 'light')
-        }
-        variant="default"
-        size="xl"
-        aria-label="Toggle color scheme"
-      >
-        <IconSun className={cx(classes.icon, classes.light)} stroke={1.5} />
-        <IconMoon className={cx(classes.icon, classes.dark)} stroke={1.5} />
-      </ActionIcon>
-      <About basics={data?.basics} />
-      <Experience experiences={data?.work} />
-      <Education education={data?.education} />
-      <Skills skills={data?.skills} />
-      <Projects projects={data?.projects} />
-      <Language langauges={data?.lang} />
-    </Container>
+    <AppShell
+      header={{ height: 60 }}
+      navbar={{
+        width: 300,
+        breakpoint: 'sm',
+        collapsed: { desktop: true, mobile: !opened },
+      }}
+      padding="md"
+    >
+      {!isPrinting && (
+        <AppShell.Header>
+          <Group h="100%" px="md">
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              hiddenFrom="sm"
+              size="sm"
+            />
+            <Group justify="space-between" style={{ flex: 1 }}>
+              <Group ml="xl" gap={0} visibleFrom="sm">
+                <ColorSchemeButton />
+              </Group>
+            </Group>
+          </Group>
+        </AppShell.Header>
+      )}
+
+      <AppShell.Navbar py="md" px={4}>
+        <ColorSchemeButton />
+      </AppShell.Navbar>
+
+      <Container size="md" pt={50}>
+        <About basics={data?.basics} />
+        <Experience experiences={data?.work} />
+        <Education education={data?.education} />
+        <Skills skills={data?.skills} />
+        <Projects projects={data?.projects} />
+        <Language langauges={data?.lang} />
+      </Container>
+    </AppShell>
   );
 }

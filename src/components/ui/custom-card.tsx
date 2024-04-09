@@ -1,4 +1,5 @@
 import { Card, Image, Indicator, Text } from '@mantine/core';
+import usePrintDetector from '../../hooks/use-print-detector';
 
 export default function CustomCard({
   projectUrl,
@@ -13,11 +14,8 @@ export default function CustomCard({
   name: string;
   description: string;
 }) {
-  //   <AppShell
-  //   header={{ height: 60 }}
-  //   navbar={{ width: 300, breakpoint: 'sm', collapsed: { desktop: true, mobile: !opened } }}
-  //   padding="md"
-  // >
+  const { isPrinting } = usePrintDetector();
+
   return (
     <Card
       withBorder
@@ -27,17 +25,19 @@ export default function CustomCard({
       href={projectUrl}
       target="_blank"
     >
-      <Card.Section withBorder>
-        <Image
-          fit="scale-down"
-          src={imageSrc}
-          fallbackSrc="https://placehold.co/600x400?text=Placeholder"
-          h={120}
-          alt="No way!"
-        />
-      </Card.Section>
+      {!isPrinting && (
+        <Card.Section withBorder>
+          <Image
+            fit="scale-down"
+            src={imageSrc}
+            fallbackSrc="https://placehold.co/600x400?text=Placeholder"
+            h={120}
+            alt="No way!"
+          />
+        </Card.Section>
+      )}
 
-      <Text fw={500} size="md" mt="md" c="dark">
+      <Text fw={500} size="md" mt="md">
         {name}
       </Text>
       <Indicator

@@ -9,7 +9,7 @@ export default function Skills({ skills }: { skills?: PersonSkill[] }) {
       <Group gap="xs" wrap="wrap">
         {skills?.map((skill, index) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-          <Badge key={index} color="dark" variant="light">
+          <Badge key={index} color="dark" >
             {skill}
           </Badge>
         ))}
