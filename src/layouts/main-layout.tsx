@@ -11,7 +11,7 @@ export default function MainLayout() {
   const { data } = usePortfolioData();
 
   return (
-    <Container size="sm" pt={50}>
+    <Container size="md" pt={50}>
       <About basics={data?.basics} />
       <Experience experiences={data?.work} />
       <Education education={data?.education} />

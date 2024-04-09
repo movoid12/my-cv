@@ -6,7 +6,7 @@
     "email": "example@icloud.com",
     "phone": "(123) 456-7890",
     "address": "Leipzig, Germany",
-    "location_link": "https://www.google.com/maps/place/Leipzig",
+    "locationLink": "https://www.google.com/maps/place/Leipzig",
     "linkedin": "https://www.linkedin.com/in/mouaz-aldakkak-45b17280",
     "github": "https://github.com/movoid12"
   },
