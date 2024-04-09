@@ -11,7 +11,7 @@ export default function Experience({
       <Title order={3}>Work Experience</Title>
       {experiences?.map((exp) => (
         <Box key={exp.id} pt="md">
-          <Group gap="xl" grow >
+          <Group gap="xl" grow>
             <Text fw="bold">{exp.company}</Text>
             <Group justify="flex-end">
               <Text size="xs" fw="500">

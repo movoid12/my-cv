@@ -40,11 +40,7 @@ export default function CustomCard({
       <Text fw={500} size="md" mt="md">
         {name}
       </Text>
-      <Indicator
-        color={isActive ? 'green' : 'red'}
-        position="top-end"
-        size="7"
-      />
+      <Indicator color={isActive ? 'green' : 'red'} size="7" zIndex="0" />
       <Text mt="xs" c="dimmed" size="xs">
         {description}
       </Text>

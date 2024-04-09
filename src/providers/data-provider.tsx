@@ -83,13 +83,9 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     data,
     error,
     isLoading: loading,
-  } = useSWRImmutable(
-    'https://scaling-spork-pqg7jwxjp5626wwx-5173.app.github.dev/assets/portfolio.json',
-    fetcher,
-    {
-      suspense: true,
-    },
-  );
+  } = useSWRImmutable('http://localhost:5173/assets/portfolio.json', fetcher, {
+    suspense: true,
+  });
 
   return (
     <PortfolioContext.Provider value={{ data, loading, error }}>
