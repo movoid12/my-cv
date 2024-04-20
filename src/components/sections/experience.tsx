@@ -1,10 +1,10 @@
 import { Box, Card, Group, Text, Title } from '@mantine/core';
-import type { PersonExperience } from '../../providers/data-provider';
+import type { ResumeExperience } from '../../providers/data-provider';
 
 export default function Experience({
   experiences,
 }: {
-  experiences?: PersonExperience[];
+  experiences?: ResumeExperience[];
 }) {
   return (
     <Card>

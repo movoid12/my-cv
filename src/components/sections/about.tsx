@@ -18,9 +18,9 @@ import {
 } from '@tabler/icons-react';
 
 import usePrintDetector from '../../hooks/use-print-detector';
-import type { PersonBasics } from '../../providers/data-provider';
+import type { ResumeBasics } from '../../providers/data-provider';
 
-export default function About({ basics }: { basics?: PersonBasics }) {
+export default function About({ basics }: { basics?: ResumeBasics }) {
   const { isPrinting } = usePrintDetector();
 
   return (

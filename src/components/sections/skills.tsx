@@ -1,7 +1,7 @@
 import { Badge, Card, Group, Space, Title } from '@mantine/core';
-import type { PersonSkill } from '../../providers/data-provider';
+import type { ResumeSkill } from '../../providers/data-provider';
 
-export default function Skills({ skills }: { skills?: PersonSkill[] }) {
+export default function Skills({ skills }: { skills?: ResumeSkill[] }) {
   return (
     <Card>
       <Title order={3}>Skills</Title>

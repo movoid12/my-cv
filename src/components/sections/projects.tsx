@@ -1,8 +1,8 @@
 import { Card, SimpleGrid, Space, Title } from '@mantine/core';
-import type { PersonProject } from '../../providers/data-provider';
+import type { ResumeProject } from '../../providers/data-provider';
 import CustomCard from '../ui/custom-card';
 
-export default function Projects({ projects }: { projects?: PersonProject[] }) {
+export default function Projects({ projects }: { projects?: ResumeProject[] }) {
   return (
     <Card>
       <Title order={3}>Projects</Title>

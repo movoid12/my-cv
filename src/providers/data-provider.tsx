@@ -9,7 +9,7 @@ type SocialLink = {
   xing?: string;
 };
 
-export type PersonBasics = {
+export type ResumeBasics = {
   name: string;
   label: string;
   image: string;
@@ -19,7 +19,7 @@ export type PersonBasics = {
   locationLink: string;
 } & SocialLink;
 
-export type PersonEducation = {
+export type ResumeEducation = {
   id: number;
   institution: string;
   area: string;
@@ -28,7 +28,7 @@ export type PersonEducation = {
   endDate: string;
 };
 
-export type PersonExperience = {
+export type ResumeExperience = {
   id: number;
   company: string;
   position: string;
@@ -38,9 +38,9 @@ export type PersonExperience = {
   location: string;
 };
 
-export type PersonSkill = string[];
+export type ResumeSkill = string[];
 
-export type PersonProject = {
+export type ResumeProject = {
   id: number;
   name: string;
   description: string;
@@ -49,19 +49,19 @@ export type PersonProject = {
   online: boolean;
 };
 
-export type PersonLanguage = {
+export type ResumeLanguage = {
   id: number;
   name: string;
   level: string;
 };
 
 type ResumeData = {
-  basics: PersonBasics;
-  education: PersonEducation[];
-  lang: PersonLanguage[];
-  projects: PersonProject[];
-  skills: PersonSkill[];
-  work: PersonExperience[];
+  basics: ResumeBasics;
+  education: ResumeEducation[];
+  lang: ResumeLanguage[];
+  projects: ResumeProject[];
+  skills: ResumeSkill[];
+  work: ResumeExperience[];
 };
 
 type PortfolioContextData = {
