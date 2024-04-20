@@ -1,5 +1,5 @@
 import { Box, Card, Group, Text, Title } from '@mantine/core';
-import type { ResumeEducation } from '../../providers/data-provider';
+import type { ResumeEducation } from '@/providers/data-provider';
 
 export default function Education({
   education,

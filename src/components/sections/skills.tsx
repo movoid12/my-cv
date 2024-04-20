@@ -1,5 +1,5 @@
 import { Badge, Card, Group, Space, Title } from '@mantine/core';
-import type { ResumeSkill } from '../../providers/data-provider';
+import type { ResumeSkill } from '@/providers/data-provider';
 
 export default function Skills({ skills }: { skills?: ResumeSkill[] }) {
   return (

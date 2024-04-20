@@ -1,6 +1,6 @@
 import { Card, SimpleGrid, Space, Title } from '@mantine/core';
-import type { ResumeProject } from '../../providers/data-provider';
-import CustomCard from '../ui/custom-card';
+import type { ResumeProject } from '@/providers/data-provider';
+import CustomCard from '@/components/ui/custom-card';
 
 export default function Projects({ projects }: { projects?: ResumeProject[] }) {
   return (
