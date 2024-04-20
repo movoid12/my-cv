@@ -1,6 +1,5 @@
 import { AppShell, Burger, Container, Group } from '@mantine/core';
 
-import { useDisclosure } from '@mantine/hooks';
 import About from '@/components/sections/about';
 import Education from '@/components/sections/education';
 import Experience from '@/components/sections/experience';
@@ -10,6 +9,7 @@ import Skills from '@/components/sections/skills';
 import ColorSchemeButton from '@/components/ui/color-scheme-button';
 import usePrintDetector from '@/hooks/use-print-detector';
 import { usePortfolioData } from '@/providers/data-provider';
+import { useDisclosure } from '@mantine/hooks';
 
 export default function MainLayout() {
   const { data } = usePortfolioData();

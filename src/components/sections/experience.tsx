@@ -1,5 +1,5 @@
-import { Box, Card, Group, Text, Title } from '@mantine/core';
 import type { ResumeExperience } from '@/providers/data-provider';
+import { Box, Card, Group, Text, Title } from '@mantine/core';
 
 export default function Experience({
   experiences,

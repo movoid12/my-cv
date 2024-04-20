@@ -1,5 +1,5 @@
-import { Card, Image, Indicator, Text } from '@mantine/core';
 import usePrintDetector from '@/hooks/use-print-detector';
+import { Card, Image, Indicator, Text } from '@mantine/core';
 
 export default function CustomCard({
   projectUrl,

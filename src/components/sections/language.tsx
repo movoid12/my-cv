@@ -1,5 +1,5 @@
-import { Card, SimpleGrid, Space, Text, Title } from '@mantine/core';
 import type { ResumeLanguage } from '@/providers/data-provider';
+import { Card, SimpleGrid, Space, Text, Title } from '@mantine/core';
 
 export default function Language({
   langauges,
