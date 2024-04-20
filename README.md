@@ -9,7 +9,7 @@ App built with:
 - [React](https://react.dev)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/)
-- [Mantine](https://mantine.dev/)
+- [Mantine](https://mantine.dev/) from the following template: https://github.com/mantinedev/vite-min-template
 - [Biome](https://biome.js.org/)
 
 1. Clone the repository:
