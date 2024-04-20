@@ -2,9 +2,9 @@ import { MantineProvider } from '@mantine/core';
 import React, { Suspense } from 'react';
 import reactDom from 'react-dom/client';
 
-import App from '@/app.tsx';
-import LoadingSpinner from '@/components/ui/loading-spinner.tsx';
-import { theme } from '@/theme';
+import App from './app.tsx';
+import LoadingSpinner from './components/ui/loading-spinner.tsx';
+import { theme } from './theme';
 
 import '@mantine/core/styles.css';
 
