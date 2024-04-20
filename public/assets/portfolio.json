@@ -1,0 +1,123 @@
+{
+  "basics": {
+    "name": "Mouaz Aldakkak",
+    "label": "I am a full-stack developer focusing on front-end web development, I work mostly with TypeScript, React, Node.js",
+    "image": "url_to_image",
+    "email": "example@icloud.com",
+    "phone": "(123) 456-7890",
+    "address": "Leipzig, Germany",
+    "locationLink": "https://www.google.com/maps/place/Leipzig",
+    "linkedin": "https://www.linkedin.com/in/mouaz-aldakkak-45b17280",
+    "github": "https://github.com/movoid12"
+  },
+  "education": [
+    {
+      "id": 1,
+      "institution": "Berufsschulzentrum 7 Leipzig",
+      "area": "Duale Berufsausbildung - IHK Leipzig",
+      "studyType": "Computer Science - Software Development",
+      "startDate": "2019",
+      "endDate": "2022"
+    },
+    {
+      "id": 2,
+      "institution": "Kiron Open Higher Education",
+      "area": "University Prep.",
+      "studyType": "Computer Science",
+      "startDate": "2019",
+      "endDate": "2022"
+    }
+  ],
+  "work": [
+    {
+      "id": 1,
+      "company": "ETECTURE GmbH",
+      "position": "Software Developer",
+      "startDate": "2022-11",
+      "endDate": "Present",
+      "summary": "Software Developer in Node.JS, Typescript",
+      "location": "Frankfurt am Main, Hesse, Germany (Remote)"
+    },
+    {
+      "id": 2,
+      "company": "zwonull media",
+      "position": "Junior Software Developer",
+      "startDate": "2022-7",
+      "endDate": "2022-10",
+      "summary": "• Migration from TYPO3 into Wordpress. Online contributions and autonomous project management\n• Understanding of web engineering principles, and have used this knowledge to optimize website performance and improve user experience.",
+      "location": "Leipzig, Germany"
+    },
+    {
+      "id": 3,
+      "company": "zwonull media",
+      "position": "Trainee in Web-Engineering",
+      "startDate": "2019-02",
+      "endDate": "2022-07",
+      "summary": "Digital signage implementation -  Using WordPress, Git, and other CMS systems to customize content and do code changes - Using HTML, CSS, JavaScript and TypeScript to create web pages and fix issues of PWAs.",
+      "location": "Leipzig, Germany"
+    }
+  ],
+  "skills": [
+    "Web Engineering",
+    "TypeScript",
+    "Node.js",
+    "JavaScript",
+    "React",
+    "Wordpress",
+    "MySQL",
+    "NoSQL",
+    "Firebase",
+    "AWS Services"
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Unterwegs",
+      "description": "Side Project, Wordpress, CMS, Updates/maintenance, JavaScript, CSS, HTML5, Linux Server, MySQL",
+      "projectUrl": "https://www.unterwegs-und-angekommen.de/",
+      "imageSrc": "https://www.unterwegs-und-angekommen.de/wp-content/uploads/2021/12/Logo_UuA_mit_Schrift.jpg",
+      "online": true
+    },
+    {
+      "id": 2,
+      "name": "Bestokoko",
+      "description": "Side Project, Wordpress, CMS, Updates/maintenance, MySQL, HTML5, JavaScript, CSS",
+      "projectUrl": "https://bestokoko.de/",
+      "imageSrc": "https://bestokoko.de/wp-content/uploads/2021/10/1003mal753.png",
+      "online": true
+    },
+    {
+      "id": 3,
+      "name": "Social Cooking",
+      "description": "Side Project, Bootstrap, CSS, HTML5, JavaScript",
+      "projectUrl": "https://movoid.alwaysdata.net/",
+      "imageSrc": "https://movoid.alwaysdata.net/img/logo2.png",
+      "online": true
+    },
+    {
+      "id": 4,
+      "name": "Sustain Legal - Law Service",
+      "description": "Side Project, Wordpress, Updates/maintenance, CMS, CSS, HTML5, JavaScript, SEO",
+      "projectUrl": "https://sustainlegal.de/",
+      "imageSrc": "https://www.anwalt.de/image/company/fit-dimensions/logo_offical_6410da0e644e48.86772540.png",
+      "online": true
+    }
+  ],
+  "lang": [
+    {
+      "id": 1,
+      "name": "German",
+      "level": "Full Professional"
+    },
+    {
+      "id": 3,
+      "name": "English",
+      "level": "Professional Working"
+    },
+    {
+      "id": 2,
+      "name": "Arabic",
+      "level": "Native"
+    }
+  ]
+}

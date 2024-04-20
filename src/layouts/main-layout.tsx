@@ -1,23 +1,63 @@
-import { Grid, Stack } from "@mantine/core";
+import { AppShell, Burger, Container, Group } from '@mantine/core';
 
-import { SocialMedia } from "../components/social-media-section";
-import EducationSection from "../components/education-section";
-import { WorkExperienceSection } from "../components/work-exp-section";
-import { SkillsSection } from "../components/skills-section";
-import { ProjectsSection } from "../components/projects-section";
-import { usePortfolio } from "../providers/portfolio-provider";
+import { useDisclosure } from '@mantine/hooks';
+import About from '../components/sections/about';
+import Education from '../components/sections/education';
+import Experience from '../components/sections/experience';
+import Language from '../components/sections/language';
+import Projects from '../components/sections/projects';
+import Skills from '../components/sections/skills';
+import ColorSchemeButton from '../components/ui/color-scheme-button';
+import usePrintDetector from '../hooks/use-print-detector';
+import { usePortfolioData } from '../providers/data-provider';
 
-const MainLayout = () => {
-  const { data } = usePortfolio();
+export default function MainLayout() {
+  const { data } = usePortfolioData();
+
+  const { isPrinting } = usePrintDetector();
+
+  const [opened, { toggle }] = useDisclosure();
+
   return (
-    <Stack>
-      <SocialMedia />
-      <WorkExperienceSection experiences={data?.workExperience} />
-      <EducationSection education={data?.education} />
-      <SkillsSection skills={data?.skills} />
-      <ProjectsSection projects={data?.projects} />
-    </Stack>
-  );
-};
+    <AppShell
+      header={{ height: 60 }}
+      navbar={{
+        width: 300,
+        breakpoint: 'sm',
+        collapsed: { desktop: true, mobile: !opened },
+      }}
+      padding="md"
+    >
+      {!isPrinting && (
+        <AppShell.Header>
+          <Group h="100%" px="md">
+            <Burger
+              opened={opened}
+              onClick={toggle}
+              hiddenFrom="sm"
+              size="sm"
+            />
+            <Group justify="space-between" style={{ flex: 1 }}>
+              <Group ml="xl" gap={0} visibleFrom="sm">
+                <ColorSchemeButton />
+              </Group>
+            </Group>
+          </Group>
+        </AppShell.Header>
+      )}
 
-export default MainLayout;
+      <AppShell.Navbar py="md" px={4}>
+        <ColorSchemeButton />
+      </AppShell.Navbar>
+
+      <Container size="md" pt={50}>
+        <About basics={data?.basics} />
+        <Experience experiences={data?.work} />
+        <Education education={data?.education} />
+        <Skills skills={data?.skills} />
+        <Projects projects={data?.projects} />
+        <Language langauges={data?.lang} />
+      </Container>
+    </AppShell>
+  );
+}

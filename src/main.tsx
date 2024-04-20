@@ -1,9 +1,25 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import { MantineProvider } from '@mantine/core';
+import React, { Suspense } from 'react';
+import reactDom from 'react-dom/client';
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+import App from './app.tsx';
+import LoadingSpinner from './components/ui/loading-spinner.tsx';
+import { theme } from './theme';
+
+import '@mantine/core/styles.css';
+
+const rootElement = document.getElementById('root');
+
+if (!rootElement) {
+  throw new Error('Root element not found');
+}
+
+reactDom.createRoot(rootElement).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <MantineProvider theme={theme}>
+      <Suspense fallback={<LoadingSpinner />}>
+        <App />
+      </Suspense>
+    </MantineProvider>
+  </React.StrictMode>,
 );
