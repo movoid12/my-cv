@@ -44,7 +44,7 @@ App built with:
 
 ### How to enter your own data
 
-This CV Template that allows you to showcase your skills, education, work experience, projects, and languages. In order to make this template work correctly, you need to fill out the [Example-Portfolio](docs/portfolio-example.json) and host it on an API endpoint.
+That CV Template allows you to showcase your contact infos, skills, education, work experience, projects, and languages. In order to make this template work correctly, you need to fill out the [Example-Portfolio](docs/portfolio-example.json) and host it on an API endpoint.
 
 ## How to Use
 
@@ -55,7 +55,7 @@ This CV Template that allows you to showcase your skills, education, work experi
 
 <hr>
 
-### **Thank you for using this template! Feel free to customize it further to suit your needs**
+### **Thank you for using my CV template! Feel free to customize it further to suit your needs**
 
 ```yml
 If you like the template,
