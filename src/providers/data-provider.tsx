@@ -2,6 +2,7 @@ import type React from 'react';
 import { createContext, useContext } from 'react';
 // biome-ignore lint/style/useNamingConvention: <explanation>
 import useSWRImmutable from 'swr/immutable';
+import { configs } from '../utils/configs';
 
 type SocialLink = {
   linkedin: string;
@@ -83,7 +84,7 @@ export function DataProvider({ children }: { children: React.ReactNode }) {
     data,
     error,
     isLoading: loading,
-  } = useSWRImmutable('http://localhost:5173/assets/portfolio.json', fetcher, {
+  } = useSWRImmutable(`${configs.apiUrl}`, fetcher, {
     suspense: true,
   });
 

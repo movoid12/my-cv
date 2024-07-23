@@ -1,0 +1,57 @@
+{
+  "basics": {
+    "name": "John Doe",
+    "label": "Software Engineer",
+    "image": "https://example.com/image.jpg",
+    "email": "john.doe@example.com",
+    "phone": "(555) 123-4567",
+    "address": "New York, USA",
+    "locationLink": "https://www.google.com/maps/place/NewYork",
+    "linkedin": "https://www.linkedin.com/johndoe",
+    "github": "https://www.github.com/johndoe"
+  },
+  "education": [
+    {
+      "id": 1,
+      "institution": "University of Tech",
+      "area": "Computer Science",
+      "studyType": "Bachelor's Degree",
+      "startDate": "2015",
+      "endDate": "2019"
+    }
+  ],
+  "work": [
+    {
+      "id": 1,
+      "company": "Tech Solutions LLC",
+      "position": "Full Stack Developer",
+      "startDate": "2020-01",
+      "endDate": "Present",
+      "summary": "Developing web applications using React and Node.js",
+      "location": "San Francisco, USA"
+    }
+  ],
+  "skills": ["JavaScript", "React", "Node.js", "HTML", "CSS", "MongoDB", "AWS"],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Portfolio Website",
+      "description": "Personal portfolio showcasing projects and skills",
+      "projectUrl": "https://www.johndoeportfolio.com",
+      "imageSrc": "https://www.johndoeportfolio.com/image.jpg",
+      "online": true
+    }
+  ],
+  "lang": [
+    {
+      "id": 1,
+      "name": "English",
+      "level": "Fluent"
+    },
+    {
+      "id": 2,
+      "name": "Spanish",
+      "level": "Intermediate"
+    }
+  ]
+}

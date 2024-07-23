@@ -48,5 +48,8 @@
   },
   "organizeImports": {
     "enabled": true
+  },
+  "files": {
+    "ignore": ["./src/vite-env.d.ts"]
   }
 }
