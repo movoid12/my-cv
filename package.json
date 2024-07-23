@@ -3,9 +3,8 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "packageManager": "pnpm@8.14.1",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port 5173",
     "build": "tsc && vite build",
     "check": "tsc",
     "format": "biome format --write .",
@@ -21,7 +20,8 @@
     "clsx": "^2.1.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "swr": "2.2.5"
+    "swr": "2.2.5",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.4",

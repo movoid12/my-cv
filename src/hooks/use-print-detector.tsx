@@ -25,7 +25,6 @@ const usePrintDetector = () => {
 
   const triggerPrint = () => {
     window.print();
-    //ToDo: remove after finishing
   };
 
   return { isPrinting, triggerPrint };
