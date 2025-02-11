@@ -11,6 +11,7 @@ App built with:
 - [Vite](https://vitejs.dev/ "https://vitejs.dev/")
 - [Mantine](https://mantine.dev/ "https://mantine.dev/") from the following template: [https://github.com/mantinedev/vite-min-template](https://github.com/mantinedev/vite-min-template "https://github.com/mantinedev/vite-min-template")
 - [Biome](https://biome.js.org/ "https://biome.js.org/")
+- [Mockfly](https://www.mockfly.dev/) 
 
 1. Clone the repository:
 
@@ -49,7 +50,7 @@ That CV Template allows you to showcase your contact infos, skills, education, w
 ## How to Use
 
 1. Fill out the [Example-Portfolio](docs/portfolio-example.json) with your own information following the provided schema.
-2. Host the data on an API endpoint using [Beeceptor](https://beeceptor.com/) for example to mock and host your data.
+2. Host the data on an API endpoint using [Mockfly](https://www.mockfly.dev/) for example to mock and host your portfolio-example.json file.
 3. Sign up in Vercel and connect it to your Github account and setup the deployment of the Github repo.
 4. After hosting and deploying the App, set the environment variable `VITE_CONFIG_API_URL` in Vercel to point to the API endpoint what you already created in the step 2.
 
