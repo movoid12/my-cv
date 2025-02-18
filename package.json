@@ -13,25 +13,33 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@mantine/core": "7.7.1",
-    "@mantine/hooks": "7.7.1",
+    "@mantine/core": "7.17.0",
+    "@mantine/hooks": "7.17.0",
     "@tabler/icons": "3.1.0",
     "@tabler/icons-react": "3.1.0",
-    "clsx": "^2.1.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "clsx": "2.1.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "swr": "2.2.5",
-    "zod": "^3.23.8"
+    "zod": "3.24.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.4",
-    "@types/react": "18.2.74",
-    "@types/react-dom": "18.2.24",
-    "@vitejs/plugin-react": "4.2.1",
-    "postcss": "8.4.38",
-    "postcss-preset-mantine": "1.13.0",
+    "@total-typescript/tsconfig": "^1.0.4",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "@vitejs/plugin-react": "4.3.4",
+    "postcss": "8.5.2",
+    "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "7.0.1",
-    "typescript": "5.4.4",
-    "vite": "5.2.8"
+    "typescript": "5.7.3",
+    "vite": "6.1.0"
+  },
+  "pnpm": {
+    "overrides": {
+      "braces@<3.0.3": ">=3.0.3",
+      "micromatch@<4.0.8": ">=4.0.8",
+      "esbuild@<=0.24.2": ">=0.25.0"
+    }
   }
 }
