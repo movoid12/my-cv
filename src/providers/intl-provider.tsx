@@ -1,9 +1,9 @@
 import { IntlProvider as Provider } from 'react-intl';
 
+import { useLocale } from '../hooks/use-locale';
 import de from '../messages/de.json';
 import en from '../messages/en.json';
 import { DEFAULT_LOCALE } from '../utils/locales';
-import { useLocale } from '../hooks/use-locale';
 
 const messages: Record<string, Record<string, string>> = { de, en };
 
@@ -12,7 +12,6 @@ export default function IntlProvider({
 }: {
   children: React.ReactNode;
 }) {
-
   const { locale } = useLocale();
 
   const language = locale in messages ? locale : DEFAULT_LOCALE;

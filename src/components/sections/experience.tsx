@@ -1,6 +1,6 @@
 import { Box, Card, Group, Text, Title } from '@mantine/core';
-import type { ResumeExperience } from '../../providers/data-provider';
 import { FormattedMessage } from 'react-intl';
+import type { ResumeExperience } from '../../providers/data-provider';
 
 export default function Experience({
   experiences,

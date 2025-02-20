@@ -1,6 +1,6 @@
 import { Card, SimpleGrid, Space, Text, Title } from '@mantine/core';
-import type { ResumeLanguage } from '../../providers/data-provider';
 import { FormattedMessage } from 'react-intl';
+import type { ResumeLanguage } from '../../providers/data-provider';
 
 export default function Language({
   langauges,

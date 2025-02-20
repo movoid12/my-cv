@@ -1,7 +1,7 @@
 import { Card, SimpleGrid, Space, Title } from '@mantine/core';
+import { FormattedMessage } from 'react-intl';
 import type { ResumeProject } from '../../providers/data-provider';
 import CustomCard from '../ui/custom-card';
-import { FormattedMessage } from 'react-intl';
 
 export default function Projects({ projects }: { projects?: ResumeProject[] }) {
   return (

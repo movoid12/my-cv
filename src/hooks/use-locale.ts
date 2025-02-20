@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 let defaultBrowserLocale = navigator.language.slice(0, 2);
 const listeners = new Set<(locale: string) => void>();

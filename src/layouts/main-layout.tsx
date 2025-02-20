@@ -7,10 +7,10 @@ import Experience from '../components/sections/experience';
 import Language from '../components/sections/language';
 import Projects from '../components/sections/projects';
 import Skills from '../components/sections/skills';
+import SelectLangauge from '../components/select-language';
 import ColorSchemeButton from '../components/ui/color-scheme-button';
 import usePrintDetector from '../hooks/use-print-detector';
 import { usePortfolioData } from '../providers/data-provider';
-import SelectLangauge from '../components/select-language';
 
 export default function MainLayout() {
   const { data } = usePortfolioData();

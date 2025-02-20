@@ -1,8 +1,8 @@
-import { Select, type ComboboxData } from '@mantine/core';
+import { type ComboboxData, Select } from '@mantine/core';
 
+import { IconLanguage } from '@tabler/icons-react';
 import { useLocale } from '../hooks/use-locale';
 import { SUPPORTED_LOCALES } from '../utils/locales';
-import { IconLanguage } from '@tabler/icons-react';
 
 export default function SelectLangauge() {
   const { locale, setLocale } = useLocale();
