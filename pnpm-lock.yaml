@@ -20,11 +20,11 @@ importers:
         specifier: 7.17.0
         version: 7.17.0(react@18.3.1)
       '@tabler/icons':
-        specifier: 3.30.0
-        version: 3.30.0
+        specifier: 3.1.0
+        version: 3.1.0
       '@tabler/icons-react':
-        specifier: 3.30.0
-        version: 3.30.0(react@18.3.1)
+        specifier: 3.1.0
+        version: 3.1.0(react@18.3.1)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -610,13 +610,13 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@tabler/icons-react@3.30.0':
-    resolution: {integrity: sha512-9KZ9D1UNAyjlLkkYp2HBPHdf6lAJ2aelDqh8YYAnnmLF3xwprWKxxW8+zw5jlI0IwdfN4XFFuzqePkaw+DpIOg==}
+  '@tabler/icons-react@3.1.0':
+    resolution: {integrity: sha512-k/WTlax2vbj/LpxvaJ+BmaLAAhVUgyLj4Ftgaczz66tUSNzqrAZXCFdOU7cRMYPNVBqyqE2IdQd2rzzhDEJvkw==}
     peerDependencies:
       react: '>= 16'
 
-  '@tabler/icons@3.30.0':
-    resolution: {integrity: sha512-c8OKLM48l00u9TFbh2qhSODMONIzML8ajtCyq95rW8vzkWcBrKRPM61tdkThz2j4kd5u17srPGIjqdeRUZdfdw==}
+  '@tabler/icons@3.1.0':
+    resolution: {integrity: sha512-CpZGyS1IVJKFcv88yZ2sYZIpWWhQ6oy76BQKQ5SF0fGgOqgyqKdBGG/YGyyMW632on37MX7VqQIMTzN/uQqmFg==}
 
   '@total-typescript/tsconfig@1.0.4':
     resolution: {integrity: sha512-fO4ctMPGz1kOFOQ4RCPBRBfMy3gDn+pegUfrGyUFRMv/Rd0ZM3/SHH3hFCYG4u6bPLG8OlmOGcBLDexvyr3A5w==}
@@ -806,9 +806,6 @@ packages:
 
   node-releases@2.0.19:
     resolution: {integrity: sha512-xxOWJsBKtzAq7DY0J+DTzuz58K8e7sJbdgwkbMWQe8UYB6ekmsQ45q0M/tJDsGaZmbC+l7n57UV8Hl5tHxO9uw==}
-
-  picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
@@ -1098,7 +1095,7 @@ snapshots:
     dependencies:
       '@babel/helper-validator-identifier': 7.25.9
       js-tokens: 4.0.0
-      picocolors: 1.0.0
+      picocolors: 1.1.1
 
   '@babel/compat-data@7.26.8': {}
 
@@ -1512,12 +1509,12 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.34.8':
     optional: true
 
-  '@tabler/icons-react@3.30.0(react@18.3.1)':
+  '@tabler/icons-react@3.1.0(react@18.3.1)':
     dependencies:
-      '@tabler/icons': 3.30.0
+      '@tabler/icons': 3.1.0
       react: 18.3.1
 
-  '@tabler/icons@3.30.0': {}
+  '@tabler/icons@3.1.0': {}
 
   '@total-typescript/tsconfig@1.0.4': {}
 
@@ -1710,8 +1707,6 @@ snapshots:
   nanoid@3.3.8: {}
 
   node-releases@2.0.19: {}
-
-  picocolors@1.0.0: {}
 
   picocolors@1.1.1: {}
 

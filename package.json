@@ -20,8 +20,8 @@
   "dependencies": {
     "@mantine/core": "7.17.0",
     "@mantine/hooks": "7.17.0",
-    "@tabler/icons": "3.30.0",
-    "@tabler/icons-react": "3.30.0",
+    "@tabler/icons": "3.1.0",
+    "@tabler/icons-react": "3.1.0",
     "clsx": "2.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
@@ -47,6 +47,10 @@
       "braces@<3.0.3": ">=3.0.3",
       "micromatch@<4.0.8": ">=4.0.8",
       "esbuild@<=0.24.2": ">=0.25.0"
-    }
+    },
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "esbuild"
+    ]
   }
 }
