@@ -1,4 +1,3 @@
-import type React from 'react';
 import { createContext, useContext } from 'react';
 // biome-ignore lint/style/useNamingConvention: <explanation>
 import useSWRImmutable from 'swr/immutable';
@@ -73,7 +72,7 @@ type PortfolioContextData = {
 
 const PortfolioContext = createContext<PortfolioContextData>({
   data: null,
-  loading: true,
+  loading: false,
   error: null,
 });
 const fetcher = (url: RequestInfo | URL) =>
