@@ -1,4 +1,4 @@
-import { AppShell, Burger, Container, Group } from '@mantine/core';
+import { AppShell, Burger, Container, Flex, Group } from '@mantine/core';
 
 import { useDisclosure } from '@mantine/hooks';
 import About from '../components/sections/about';
@@ -21,13 +21,13 @@ export default function MainLayout() {
 
   return (
     <AppShell
-      header={{ height: 60 }}
+      header={{ height: 55 }}
       navbar={{
         width: 300,
         breakpoint: 'sm',
         collapsed: { desktop: true, mobile: !opened },
       }}
-      padding="md"
+      padding="sm"
     >
       {!isPrinting && (
         <AppShell.Header>
@@ -39,9 +39,11 @@ export default function MainLayout() {
               size="sm"
             />
             <Group justify="space-between" style={{ flex: 1 }}>
-              <Group ml="xl" gap={4} visibleFrom="sm">
-                <ColorSchemeButton />
+              <Group ml="xl" gap="md" visibleFrom="sm">
                 <SelectLangauge />
+              </Group>
+              <Group ml="xl" gap="md" visibleFrom="sm">
+                <ColorSchemeButton />
               </Group>
             </Group>
           </Group>
@@ -49,8 +51,16 @@ export default function MainLayout() {
       )}
 
       <AppShell.Navbar py="md" px={4}>
-        <ColorSchemeButton />
-        <SelectLangauge />
+        <Flex
+          gap="xl"
+          justify="center"
+          align="center"
+          direction="column"
+          wrap="wrap"
+        >
+          <SelectLangauge />
+          <ColorSchemeButton />
+        </Flex>
       </AppShell.Navbar>
 
       <Container size="md" pt={50}>
