@@ -12,8 +12,8 @@
     "lint:fix": "biome lint ./src && biome check --apply ./src",
     "preview": "vite preview",
     "intl": "pnpm run intl:extract && pnpm run intl:compile && pnpm run intl:clean",
-    "intl:extract": "formatjs extract 'src/**/*.{tsx,ts}' --format=simple --out-file=messages.json --throws",
-    "intl:compile": "formatjs compile messages.json --format=simple --out-file=src/messages/de.json",
+    "intl:extract": "formatjs extract 'src/**/*.{tsx,ts}' '!src/vite-env.d.ts' --format=simple --out-file=messages.json --throws",
+    "intl:compile": "formatjs compile messages.json --format=simple --out-file=src/messages/en.json",
     "intl:clean": "rm messages.json"
   },
   "dependencies": {

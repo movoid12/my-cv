@@ -12,15 +12,6 @@ export default function IntlProvider({
 }: {
   children: React.ReactNode;
 }) {
-  /*  const [locale, setLocale] = useState('');
-
-  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
-  useEffect(() => {
-    const userOsDeafultLangauge = navigator.language.slice(0, 2);
-
-    setLocale(userOsDeafultLangauge);
-  }, [setLocale]);
-   */
 
   const { locale } = useLocale();
 
