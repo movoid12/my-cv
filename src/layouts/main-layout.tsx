@@ -10,6 +10,7 @@ import Skills from '../components/sections/skills';
 import ColorSchemeButton from '../components/ui/color-scheme-button';
 import usePrintDetector from '../hooks/use-print-detector';
 import { usePortfolioData } from '../providers/data-provider';
+import SelectLangauge from '../components/select-language';
 
 export default function MainLayout() {
   const { data } = usePortfolioData();
@@ -38,8 +39,9 @@ export default function MainLayout() {
               size="sm"
             />
             <Group justify="space-between" style={{ flex: 1 }}>
-              <Group ml="xl" gap={0} visibleFrom="sm">
+              <Group ml="xl" gap={4} visibleFrom="sm">
                 <ColorSchemeButton />
+                <SelectLangauge />
               </Group>
             </Group>
           </Group>
@@ -48,6 +50,7 @@ export default function MainLayout() {
 
       <AppShell.Navbar py="md" px={4}>
         <ColorSchemeButton />
+        <SelectLangauge />
       </AppShell.Navbar>
 
       <Container size="md" pt={50}>
