@@ -73,9 +73,15 @@
     }
   },
   "organizeImports": {
-    "enabled": false
+    "enabled": true
   },
   "files": {
     "ignore": ["./src/vite-env.d.ts"]
+  },
+  "css": {
+    "parser": {
+      "cssModules": true,
+      "allowWrongLineComments": true
+    }
   }
 }
