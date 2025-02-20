@@ -1,10 +1,13 @@
 import MainLayout from './layouts/main-layout';
 import { DataProvider } from './providers/data-provider';
+import IntlProvider from './providers/intl-provider';
 
 export default function App() {
   return (
-    <DataProvider>
-      <MainLayout />
-    </DataProvider>
+    <IntlProvider>
+      <DataProvider>
+        <MainLayout />
+      </DataProvider>
+    </IntlProvider>
   );
 }

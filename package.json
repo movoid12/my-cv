@@ -10,7 +10,11 @@
     "format": "biome format --write .",
     "lint": "biome check --error-on-warnings .",
     "lint:fix": "biome lint ./src && biome check --apply ./src",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "intl": "pnpm run intl:extract && pnpm run intl:compile && pnpm run intl:clean",
+    "intl:extract": "formatjs extract 'src/**/*.{tsx,ts}' --format=simple --out-file=messages.json --throws",
+    "intl:compile": "formatjs compile messages.json --format=simple --out-file=src/messages/de.json",
+    "intl:clean": "rm messages.json"
   },
   "dependencies": {
     "@mantine/core": "7.17.0",
@@ -20,12 +24,14 @@
     "clsx": "2.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "react-intl": "7.1.6",
     "swr": "2.2.5",
     "zod": "3.24.2"
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.4",
-    "@total-typescript/tsconfig": "^1.0.4",
+    "@formatjs/cli": "6.6.1",
+    "@total-typescript/tsconfig": "1.0.4",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "@vitejs/plugin-react": "4.3.4",

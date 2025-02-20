@@ -1,5 +1,5 @@
 import { MantineProvider } from '@mantine/core';
-import React, { Suspense } from 'react';
+import { StrictMode, Suspense } from 'react';
 import reactDom from 'react-dom/client';
 
 import App from './app.tsx';
@@ -15,11 +15,11 @@ if (!rootElement) {
 }
 
 reactDom.createRoot(rootElement).render(
-  <React.StrictMode>
+  <StrictMode>
     <MantineProvider theme={theme}>
       <Suspense fallback={<LoadingSpinner />}>
         <App />
       </Suspense>
     </MantineProvider>
-  </React.StrictMode>,
+  </StrictMode>,
 );
