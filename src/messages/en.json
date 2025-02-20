@@ -1,3 +1,7 @@
 {
-  "test": "English"
+  "components.section.education.card.title": "Education",
+  "components.section.experience.card.title": "Work Experience",
+  "components.section.language.card.title": "Langauges",
+  "components.section.projects.card.title": "Projects",
+  "components.section.skills.card.title": "Skills"
 }

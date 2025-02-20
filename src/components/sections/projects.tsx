@@ -1,11 +1,17 @@
 import { Card, SimpleGrid, Space, Title } from '@mantine/core';
 import type { ResumeProject } from '../../providers/data-provider';
 import CustomCard from '../ui/custom-card';
+import { FormattedMessage } from 'react-intl';
 
 export default function Projects({ projects }: { projects?: ResumeProject[] }) {
   return (
     <Card>
-      <Title order={3}>Projects</Title>
+      <Title order={3}>
+        <FormattedMessage
+          defaultMessage="Projects"
+          id="components.section.projects.card.title"
+        />
+      </Title>
       <Space h="xl" />
       <SimpleGrid
         cols={{ base: 1, sm: 2, lg: 3 }}

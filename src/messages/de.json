@@ -1,3 +1,7 @@
 {
-  "test": "German"
+  "components.section.education.card.title": "Ausbildung",
+  "components.section.experience.card.title": "Berufserfahrung",
+  "components.section.language.card.title": "Erfahrung",
+  "components.section.projects.card.title": "Projekte",
+  "components.section.skills.card.title": "Fähigkeiten"
 }

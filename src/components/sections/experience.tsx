@@ -1,5 +1,6 @@
 import { Box, Card, Group, Text, Title } from '@mantine/core';
 import type { ResumeExperience } from '../../providers/data-provider';
+import { FormattedMessage } from 'react-intl';
 
 export default function Experience({
   experiences,
@@ -8,7 +9,12 @@ export default function Experience({
 }) {
   return (
     <Card>
-      <Title order={3}>Work Experience</Title>
+      <Title order={3}>
+        <FormattedMessage
+          defaultMessage="Work Experience"
+          id="components.section.experience.card.title"
+        />
+      </Title>
       {experiences?.map((exp) => (
         <Box key={exp.id} pt="md">
           <Group gap="xl" grow>

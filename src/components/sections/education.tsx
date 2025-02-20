@@ -1,14 +1,23 @@
 import { Box, Card, Group, Text, Title } from '@mantine/core';
 import type { ResumeEducation } from '../../providers/data-provider';
+import { FormattedMessage } from 'react-intl';
 
 export default function Education({
   education,
 }: {
   education?: ResumeEducation[];
 }) {
+  // const intl = useIntl();
+  // <h1>{intl.formatMessage({ id: 'test' })}</h1>
+
   return (
     <Card>
-      <Title order={3}>Education</Title>
+      <Title order={3}>
+        <FormattedMessage
+          defaultMessage="Education"
+          id="components.section.education.card.title"
+        />
+      </Title>
       {education?.map((edu) => (
         <Box key={edu.id} pt="md">
           <Group gap="xl" grow>
