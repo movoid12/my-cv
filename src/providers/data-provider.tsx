@@ -1,8 +1,8 @@
 import { createContext, useContext } from 'react';
 // biome-ignore lint/style/useNamingConvention: <explanation>
 import useSWRImmutable from 'swr/immutable';
-import { configs } from '../utils/configs';
 import { useLocale } from '../hooks/use-locale';
+import { configs } from '../utils/configs';
 import { DEFAULT_LOCALE } from '../utils/locales';
 
 type SocialLink = {

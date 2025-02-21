@@ -10,7 +10,7 @@
     "check": "tsc",
     "format": "biome format --write .",
     "lint": "biome check --error-on-warnings .",
-    "lint:fix": "biome lint ./src && biome check --apply ./src",
+    "lint:fix": "biome lint ./src && biome check --write ./src",
     "preview": "vite preview",
     "intl": "pnpm run intl:extract && pnpm run intl:compile && pnpm run intl:clean",
     "intl:extract": "formatjs extract 'src/**/*.{tsx,ts}' '!src/vite-env.d.ts' --format=simple --out-file=messages.json --throws",
