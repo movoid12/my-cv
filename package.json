@@ -15,7 +15,9 @@
     "intl": "pnpm run intl:extract && pnpm run intl:compile && pnpm run intl:clean",
     "intl:extract": "formatjs extract 'src/**/*.{tsx,ts}' '!src/vite-env.d.ts' --format=simple --out-file=messages.json --throws",
     "intl:compile": "formatjs compile messages.json --format=simple --out-file=src/messages/en.json",
-    "intl:clean": "rm messages.json"
+    "intl:clean": "rm messages.json",
+    "lokalise:upload": "./lokalise.sh upload",
+    "lokalise:download": "./lokalise.sh download"
   },
   "dependencies": {
     "@mantine/core": "7.17.0",
@@ -48,9 +50,6 @@
       "micromatch@<4.0.8": ">=4.0.8",
       "esbuild@<=0.24.2": ">=0.25.0"
     },
-    "onlyBuiltDependencies": [
-      "@biomejs/biome",
-      "esbuild"
-    ]
+    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
   }
 }
