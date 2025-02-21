@@ -89,5 +89,5 @@ That CV Template allows you to showcase your contact infos, skills, education, w
 ```yml
 If you like the template,
 
-please support me with a star ⭐️ on my GitHub repo.
+please support me with a star ⭐️ on my GitHub repo
  ```
