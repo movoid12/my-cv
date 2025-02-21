@@ -45,11 +45,12 @@
     "vite": "6.1.1"
   },
   "pnpm": {
+    "onlyBuiltDependencies": [
+      "@biomejs/biome",
+      "esbuild"
+    ],
     "overrides": {
-      "braces@<3.0.3": ">=3.0.3",
-      "micromatch@<4.0.8": ">=4.0.8",
       "esbuild@<=0.24.2": ">=0.25.0"
-    },
-    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
+    }
   }
 }
