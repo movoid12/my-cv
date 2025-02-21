@@ -18,7 +18,11 @@ export default function SelectLangauge() {
     <Select
       data={options}
       value={locale}
-      onChange={(_value, option) => setLocale(option.value)}
+      onChange={(_value, option) => {
+        if (option) {
+          setLocale(option.value);
+        }
+      }}
       size="sm"
       maw={42}
       radius="xl"
