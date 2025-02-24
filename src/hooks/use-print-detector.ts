@@ -10,8 +10,6 @@ const usePrintDetector = () => {
 
     const handleAfterPrint = () => {
       setIsPrinting(false);
-      // biome-ignore lint/suspicious/noConsoleLog: <explanation>
-      console.log('Print operation completed');
     };
 
     window.addEventListener('beforeprint', handleBeforePrint);

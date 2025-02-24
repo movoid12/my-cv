@@ -27,12 +27,7 @@ export default function CustomCard({
     >
       {!isPrinting && (
         <Card.Section withBorder>
-          <Image
-            src={imageSrc}
-            fallbackSrc="https://placehold.co/600x400?text=Placeholder"
-            h={120}
-            alt="No way!"
-          />
+          <Image src={imageSrc} h={120} alt="card of content of the project" />
         </Card.Section>
       )}
 

@@ -1,4 +1,5 @@
 import { Card, SimpleGrid, Space, Text, Title } from '@mantine/core';
+import { FormattedMessage } from 'react-intl';
 import type { ResumeLanguage } from '../../providers/data-provider';
 
 export default function Language({
@@ -8,7 +9,12 @@ export default function Language({
 }) {
   return (
     <Card>
-      <Title order={3}>Langauges</Title>
+      <Title order={3}>
+        <FormattedMessage
+          defaultMessage="Langauges"
+          id="components.section.language.card.title"
+        />
+      </Title>
       <Space h="md" />
       {/* <Stack align="flex-start" justify="flex-start" gap="xs"> */}
       <SimpleGrid

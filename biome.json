@@ -1,17 +1,40 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.6.4/schema.json",
-  "linter": {
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": {
     "enabled": true,
+    "clientKind": "git",
+    "defaultBranch": "main",
+    "useIgnoreFile": true
+  },
+  "formatter": {
+    "indentStyle": "space"
+  },
+  "linter": {
     "rules": {
+      "complexity": {
+        "noUselessStringConcat": "warn",
+        "noUselessUndefinedInitialization": "warn",
+        "useSimplifiedLogicExpression": "warn"
+      },
       "correctness": {
+        "noConstantMathMinMaxClamp": "error",
         "noUnusedImports": "error",
         "noUnusedVariables": "error",
+        "useArrayLiterals": "error",
         "useHookAtTopLevel": "error"
+      },
+      "performance": {
+        "noBarrelFile": "error",
+        "noReExportAll": "error"
       },
       "style": {
         "noNegationElse": "warn",
+        "noYodaExpression": "warn",
         "useBlockStatements": "warn",
         "useCollapsedElseIf": "warn",
+        "useConsistentArrayType": "warn",
+        "useConsistentBuiltinInstantiation": "warn",
+        "useExplicitLengthCheck": "warn",
         "useFilenamingConvention": {
           "level": "warn",
           "options": {
@@ -20,14 +43,27 @@
         },
         "useForOf": "warn",
         "useFragmentSyntax": "warn",
-        "useNamingConvention": "warn",
+        "useNamingConvention": {
+          "level": "warn",
+          "options": {
+            "conventions": [
+              {
+                "selector": {
+                  "kind": "objectLiteralProperty"
+                },
+                "formats": ["camelCase", "CONSTANT_CASE"]
+              }
+            ]
+          }
+        },
         "useShorthandAssign": "warn",
-        "useSingleCaseStatement": "warn"
+        "useThrowNewError": "warn",
+        "useThrowOnlyError": "warn"
       },
       "suspicious": {
-        "noConsoleLog": "warn",
-        "noEmptyBlockStatements": "warn",
-        "useAwait": "warn"
+        "noEmptyBlockStatements": "error",
+        "useAwait": "error",
+        "useErrorMessage": "error"
       }
     }
   },
@@ -36,20 +72,16 @@
       "quoteStyle": "single"
     }
   },
-  "formatter": {
-    "enabled": true,
-    "indentWidth": 2,
-    "indentStyle": "space"
-  },
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
   "organizeImports": {
     "enabled": true
   },
   "files": {
     "ignore": ["./src/vite-env.d.ts"]
+  },
+  "css": {
+    "parser": {
+      "cssModules": true,
+      "allowWrongLineComments": true
+    }
   }
 }

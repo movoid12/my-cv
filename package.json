@@ -3,14 +3,21 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "packageManager": "pnpm@10.4.1",
   "scripts": {
     "dev": "vite --port 5173",
     "build": "tsc && vite build",
     "check": "tsc",
     "format": "biome format --write .",
     "lint": "biome check --error-on-warnings .",
-    "lint:fix": "biome lint ./src && biome check --apply ./src",
-    "preview": "vite preview"
+    "lint:fix": "biome lint ./src && biome check --write ./src",
+    "preview": "vite preview",
+    "intl": "pnpm run intl:extract && pnpm run intl:compile && pnpm run intl:clean",
+    "intl:extract": "formatjs extract 'src/**/*.{tsx,ts}' '!src/vite-env.d.ts' --format=simple --out-file=messages.json --throws",
+    "intl:compile": "formatjs compile messages.json --format=simple --out-file=src/messages/en.json",
+    "intl:clean": "rm messages.json",
+    "lokalise:upload": "./lokalise.sh upload",
+    "lokalise:download": "./lokalise.sh download"
   },
   "dependencies": {
     "@mantine/core": "7.17.0",
@@ -20,26 +27,27 @@
     "clsx": "2.1.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "swr": "2.2.5",
+    "react-intl": "7.1.6",
+    "swr": "2.3.2",
     "zod": "3.24.2"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.6.4",
-    "@total-typescript/tsconfig": "^1.0.4",
+    "@biomejs/biome": "1.9.4",
+    "@formatjs/cli": "6.6.1",
+    "@total-typescript/tsconfig": "1.0.4",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "@vitejs/plugin-react": "4.3.4",
-    "postcss": "8.5.2",
+    "postcss": "8.5.3",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "7.0.1",
     "typescript": "5.7.3",
-    "vite": "6.1.0"
+    "vite": "6.1.1"
   },
   "pnpm": {
     "overrides": {
-      "braces@<3.0.3": ">=3.0.3",
-      "micromatch@<4.0.8": ">=4.0.8",
       "esbuild@<=0.24.2": ">=0.25.0"
-    }
+    },
+    "onlyBuiltDependencies": ["@biomejs/biome", "esbuild"]
   }
 }

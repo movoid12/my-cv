@@ -1,4 +1,4 @@
-name: CI
+name: Check on PR
 
 on:
   pull_request:
@@ -14,12 +14,12 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: "latest"
+          version: 10.4.1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: 22
           cache: "pnpm"
 
       - name: Setup Biome CLI
@@ -28,11 +28,17 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run Biome
+      - name: Audit dependencies 🔍
+        run: pnpm audit --audit-level high
+
+      - name: Run Biome (Formatting & Linting)
         run: biome ci .
 
-      - name: Run format
-        run: pnpm format
+      - name: Run TypeScript Type Check 🔍
+        run: pnpm check
 
       - name: Build the project
         run: pnpm build
+
+      - name: Cleanup Build Artifacts
+        run: rm -rf dist 
