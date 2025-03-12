@@ -37,7 +37,7 @@ export default function About({ basics }: { basics?: ResumeBasics }) {
           <Text size="sm">{basics?.label}</Text>
           <Avatar
             size="xl"
-            src="https://res.cloudinary.com/dzk4ocmiz/image/upload/t_Profile/v1741778999/sample_3_copy_of6ev5.jpg"
+            src={basics?.image}
           />
         </Flex>
       </Stack>
