@@ -11,13 +11,14 @@ App built with:
 - [Vite](https://vitejs.dev/ "https://vitejs.dev/")
 - [Mantine](https://mantine.dev/ "https://mantine.dev/") from the following template: [https://github.com/mantinedev/vite-min-template](https://github.com/mantinedev/vite-min-template "https://github.com/mantinedev/vite-min-template")
 - [Biome](https://biome.js.org/ "https://biome.js.org/")
-- [Mockfly](https://www.mockfly.dev/) 
+- [Mockfly](https://www.mockfly.dev/)
+- Lokalise
 
 ### Prerequisites:
 - Node.js version 20 or higher, which can be verified by running `node --version` in your terminal
 - Biome (Formatter/Linter) Extension installed in your IDE
 - Install the Lokalise CLI tool, if you want to have multiple language support, by following the instructions at: https://github.com/lokalise/lokalise-cli-2-go -- This can be used to create projects, upload, and download translation files.
-- 
+
 
 1. Clone the repository:
 
@@ -87,7 +88,7 @@ That CV Template allows you to showcase your contact infos, skills, education, w
 ### **Thank you for using my CV template! Feel free to customize it further to suit your needs**
 
 ```yml
-If you like the template,
+If you like my cv template,
 
 please support me with a star ⭐️ on my GitHub repo
  ```
